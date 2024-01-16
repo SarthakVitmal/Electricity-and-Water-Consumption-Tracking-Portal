@@ -1,0 +1,11 @@
+* {
+  font-family: "Hellix" !important;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}/*# sourceMappingURL=style.css.map */
