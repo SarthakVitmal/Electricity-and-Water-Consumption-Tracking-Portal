@@ -1,0 +1,109 @@
+@import "_variables";
+
+// if you have downloaded fonts
+// @font-face {
+//     font-family: 'hellix';
+//     src: url("../fonts/Hellix-Bold.otf");
+//     font-weight: 700;
+//     font-style: normal;
+// }
+
+// Mixins
+@mixin too-small-mobile {
+    @media (min-width: $too-small-mobile) {
+        @content;
+    }
+}
+@mixin mid-small-mobile {
+    @media (min-width: $mid-small-mobile) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (min-width: $small-mobile) {
+        @content;
+    }
+}
+
+@mixin mid-mobile {
+    @media (min-width: $mid-mobile) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin small-tab {
+    @media (min-width: $small-tab) {
+        @content;
+    }
+}
+
+@mixin big-tab {
+    @media (min-width: $big-tab) {
+        @content;
+    }
+}
+
+@mixin small-desktop {
+    @media (min-width: $small-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin mid-desktop {
+    @media (min-width: $mid-desktop) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width: $large-desktop) {
+        @content;
+    }
+}
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background($position, $attachment) {
+    background-position: $position;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: $attachment;
+}
+
+* {
+    font-family: 'Hellix' !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+// Keyframes
+// Add keyframes here
+
+
+// Global
+// Add global/common classes here
+
+
+// Main classes
