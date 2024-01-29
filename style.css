@@ -3,6 +3,10 @@
     margin: 0;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
+body{
+    overflow-x: hidden;
+}
 /*& Navbar */
 .navbar{
     height: 5.5rem;
@@ -334,12 +338,14 @@
 .team{
     height: 25rem;
     background-color: #eff3f9;
+    justify-content: space-evenly;
 }
 
 .team-info{
     display: flex;
     flex-wrap: wrap;
     padding: 2rem;
+    justify-content: space-evenly;
 }
 
 .team-heading{
@@ -479,6 +485,7 @@
 /*& Footer */
 .footer-details{
     height: 12rem;
+    width: 100%;
     background-color:#0c1228;
     display: flex;
     flex-wrap: wrap;
@@ -722,11 +729,18 @@ footer a{
     .water-tracking img,.electricty-tracking img,.target img,.gogreen img{
         height: 15rem;
         margin-left: 0.8rem;
+        width: 15rem;
     }
 
     .electricty-tracking,.target{
         height: 15rem;
+        align-items: center;
+        justify-content: center;
         display: flex;
+        margin-bottom: 3rem;
+    }
+    .electricty-tracking{
+        margin-left: 0;
     }
 
     .gogreen{
@@ -737,7 +751,7 @@ footer a{
         margin-left: 0px;
     }
     .bluecolor-text{
-        font-size: 2.5rem;
+        font-size: 1.8rem;
     }
     .about-text{
         font-size: 2rem;
@@ -747,7 +761,7 @@ footer a{
     .contactus{
         height: 40rem;
         padding: 90px;
-        width: 92rem;
+        width: 86rem;
     }
     .contactus h2{
         font-size: 2rem;
@@ -820,13 +834,13 @@ footer a{
     .team{
         height: 30rem;
         background-color: #eff3f9;
-        width: 105rem;
+        width: 97rem;
     }
 
     .team-info{
         display: flex;
         flex-wrap: wrap;
-        padding: 2rem 3rem 2rem 2rem;
+        padding: 2rem 5rem 2rem 0rem;
     }
 
     .team-heading{
@@ -861,7 +875,7 @@ footer a{
 /*& Footer */
 .footer-details{
     height: 40rem;
-    width: 99rem;
+    width: 97rem;
 }
 
 
@@ -916,7 +930,7 @@ footer a{
 }
 }
 
-@media(min-width:400px) and (max-width:935px){
+@media(min-width:390px) and (max-width:935px){
     .superimage{
         width: 100rem;
         height: 50rem;
@@ -941,5 +955,601 @@ footer a{
         width: 26rem;
         background-color: #0c1228;
         margin-right: 0px;
+    }
+
+    .about{
+        height: 80rem;
+        width: 104rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .team{
+        width: 104rem;
+    }
+    .contactus{
+        width: 104rem;
+        padding: 2rem;
+    }
+
+    .footer-details{
+        width: 104rem;
+    }
+}
+@media(min-width:420px) and (max-width:935px){
+    /* &Water Saving Section */
+    .water-saving-benefits{
+        height: 40rem;
+        background-color: #eff3f9;
+        width: 106rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .water-saving-benefits section{
+        height: 40rem;
+        width: 26.25rem;
+    }
+
+    
+    /* &Team */
+    .team{
+        height: 30rem;
+        background-color: #eff3f9;
+        width: 106rem;
+    }
+    /* Contact */
+    .contactus{
+        width: 106rem;
+    }
+    /* Footer */
+    .footer-details{
+        width: 106rem;
+    }
+}
+
+@media(min-width:540px) and (max-width:935px){
+    /* &Water Saving Section */
+    .water-saving-benefits{
+        height: 40rem;
+        background-color: #eff3f9;
+        width: 105rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .water-saving-benefits section{
+        height: 40rem;
+        width: 26.25rem;
+    }
+
+    .content1{
+        font-size: 2.5rem;
+    }
+    .content-description{
+        font-size: 1.2rem;
+    }
+
+    /*& About */
+    .about{
+        height: 80rem;
+        width: 99rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left-section-content{
+        width: 50%;
+        font-size: 2rem;
+        margin-left: 3rem;
+    }
+    .about-heading{
+        font-size: 3rem;
+    }
+    .about-heading-story{
+        font-size: 2.8rem;
+    }
+    .right-section-content{
+        margin-left: 5rem;
+        width: 40%;
+    }
+
+    .first-row,.second-row{
+        display: block;
+        margin-bottom: 9rem;
+    }
+    .first-row img{
+        border-radius: 100%;
+    }
+
+    .water-tracking{
+        height: 15rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 3rem;
+    }
+    .water-tracking img,.electricty-tracking img,.target img,.gogreen img{
+        height: 15rem;
+        margin-left: 0.8rem;
+        width: 15rem;
+    }
+
+    .electricty-tracking,.target{
+        height: 15rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .electricty-tracking{
+        margin-left: 0px;
+    }
+
+    .gogreen{
+        margin-top: 10rem;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-left: 0px;
+    }
+    .bluecolor-text{
+        font-size: 1.8rem;
+        width: 500px;
+        text-align: center;
+    }
+    .about-text{
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-details{
+        height: 40rem;
+        width: 105rem;
+    }
+    
+    
+    .address-details ul li{
+        margin: 0.8rem;
+        font-size: 2.3rem;
+    }
+    
+    .company-title{
+        font-size: 2.3rem;
+    }
+
+    /* &Process */
+    .caption{
+        font-size: 1.1rem;
+    }
+    /* &Team */
+    .team{
+        height: 30rem;
+        background-color: #eff3f9;
+        width: 105rem;
+    }
+
+    .team-info{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2rem 3rem 2rem 2rem;
+    }
+
+    .team-heading{
+        font-size: 3rem;
+        color: #2b315b;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .sar-info,.sru-info,.sak-info,.abh-info,.dee-info{
+        margin-left: 1.4rem;
+    }
+    .sar-info img,.sru-info img,.sak-info img,.abh-info img,.dee-info img{
+        height: 17rem;
+        border-radius: 50%;
+        width: 17rem;
+        background-color: lightblue;
+    }
+
+    .sar-details,.sru-details,.sak-details,.abh-details,.dee-details{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .profession{
+        font-size: 1.5rem;
+    }
+
+    .link{
+        text-decoration: none;
+        color: #2b315b;
+    }
+
+    .blank{
+        background-color: lightblue;
+    }
+
+    /* Contact */
+    .contactus{
+        width: 103rem;
+    }
+}
+
+@media(min-width:1920px) and (max-width:1920px) {
+        /*& Navbar */
+        .navbar{
+            height: 10rem;
+            width: 100%;
+        }
+    
+        .navbar ul li{
+            margin: 1.4rem;
+            font-size: 2.5rem;
+        }
+    
+        .navbar ul li:hover{
+            text-decoration: underline;
+        }
+    
+        .login,.btn{
+            padding: 2rem;
+            width: 14rem;
+            border-radius: 1.5rem;
+            font-size: 2.5rem;
+        }
+    
+    
+    .navbar ul li a{
+        text-decoration: none;
+        }
+        .superimage{
+            width: 120rem;
+            height: 50rem;
+            padding: 20rem 0rem 20rem 5rem;
+        }
+        
+        .superimageheading{
+            font-size: 3rem;
+        }
+        
+        .superimageheading2{
+            font-size: 5rem;
+            padding: 1rem 0rem 0rem 7rem;
+            font-weight: bolder;
+        }
+        
+        .superimagelowerheading{
+            font-size: 2.5rem;
+            padding: 1rem 0rem 0rem 7rem;
+        }
+        
+        .start_tracking{
+            width: 10rem;
+            padding: 1rem 0rem 0rem 7rem;
+            margin-top: 1rem;
+        }
+        
+        .start{
+            width: 24rem;
+            height: 8rem;
+        }
+        
+        .start a{
+            font-size: 2.5rem;
+        }
+    
+        /* &process */
+        .process{
+            height: 10rem;
+            width: 120rem;
+        }
+    
+        .step1-login,.step2-providedata,.step3-trackusage,.step4-save,.step5-reducebills{
+            height: 10rem;
+            width: 10rem;
+            position: relative;
+            top: -5rem;
+        }
+    
+        .login-img,.providedata-img,.trackusage-img,.save-img,.reducebills-img{
+            height: 10rem;
+        }
+    
+        .caption{
+            margin-top: 0.5rem;
+        }
+    
+        /* &Water Saving Section */
+        .water-saving-benefits{
+            height: 40rem;
+            background-color: #eff3f9;
+            width: 120rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .water-saving-benefits section{
+            height: 40rem;
+            width: 30rem;
+        }
+        
+        .content1{
+            margin-top: 14rem;
+            padding: 20px;
+        }
+        
+        .content-heading{
+            font-size: 2.2rem;
+            font-weight: 500;
+        }
+        .content-description{
+            font-size: 1.1rem;
+            margin-left: 8px;
+            margin-top: 10px;
+        }
+        
+        /*& About */
+        .about{
+            height: 24rem;
+            background-color: #eff3f9 ;
+            padding: 3rem;
+            width: 120rem;
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 8rem;
+        }
+        
+        .left-section-content{
+            width: 50%;
+            font-size: 1.2rem;
+            margin-left: 3rem;
+        }
+        .about-heading{
+            display: block;
+            font-size: 2.5rem;
+            color: #2b315b;
+            text-decoration: underline;
+            margin-bottom: 1rem;
+        }
+        .about-heading-story{
+            display: block;
+            font-size: 2rem;
+            color: #2b315b;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        .right-section-content{
+            margin-left: 5rem;
+            width: 40%;
+        }
+        
+        .first-row{
+            display: flex;
+            margin-bottom: 4rem;
+        }
+        .first-row img{
+            border-radius: 100%;
+            animation: scaleUp 0.5s ease-in-out;
+        }
+        
+        .water-tracking{
+            height: 8rem;
+            flex-direction: column;
+            padding: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        
+        }
+        .water-tracking img,.electricty-tracking img,.target img,.gogreen img{
+            height: 8rem;
+            margin-left: 0.8rem;
+        }
+        
+        .electricty-tracking{
+            height: 8rem;
+            flex-direction: column;
+            padding: 0.5rem;
+            margin-left: 100px;
+            transition: transform 0.3s ease-in-out;
+        
+        }
+        
+        .second-row{
+            display: flex;
+            animation: scaleUp 0.5s ease-in-out;
+        }
+        
+        .gogreen{
+            height: 8rem;
+            flex-direction: column;
+            padding: 0.5rem;
+            margin-left: 120px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .target{
+            height: 8rem;
+            flex-direction: column;
+            padding: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .bluecolor-text{
+            color: #2b315b;
+            text-align: center;
+        }
+        .about-text{
+            margin-left: 15px;
+            font-size: 1.1rem;
+        }
+        
+    
+        /* & Contact */
+        .contactus{
+            height: 42rem;
+            padding: 50px;
+            width: 120rem;
+        }
+        .contactus h2{
+            font-size: 2rem;
+    
+        }
+        .form-section{
+            height: 28rem;
+            width: 68%;
+        }
+    
+        .form-section label{
+            font-size: 1.5rem;
+        }
+        .form-section input{
+            width: 400px;
+            height: 35px;
+            border-radius: 5px;
+            font-size: 1.3rem;
+            padding: 3px;
+        }
+        .form-section textarea{
+            width: 400px;
+            border-radius: 5px;
+            height: 100px;
+            font-size: 1rem;
+            padding:3px;
+        }
+        .contact-more-details{
+            height: 26rem;
+            width: 30%;
+            position: relative;
+            right: 100px;
+            top: 60px;
+            border-radius: 20px;
+            padding: 30px;
+        }
+    
+        .location-details,.mobile-details,.email-details{
+            display: flex;
+            padding: 5px;
+        }
+    
+        .heading{
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .location-icon{
+            font-size: 2rem;
+        }
+        .location-heading{
+            font-size: 1.2rem;
+        }
+    
+        .location-desc{
+            font-size: 1rem;
+            margin-left: 10px;
+        }
+        .email-details{
+            margin-top: 20px;
+        }
+        .mobile-details{
+            margin-top: 20px;
+        }
+    
+        .submit{
+            font-size: 1.2rem;
+        }
+    
+        /* &Team */
+        .team{
+            height: 30rem;
+            background-color: #eff3f9;
+            width: 120rem;
+        }
+    
+        .team-info{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 2rem 3rem 2rem 2rem;
+        }
+    
+        .team-heading{
+            font-size: 2.5rem;
+            color: #2b315b;
+            text-align: center;
+            text-decoration: underline;
+        }
+        .sar-info,.sru-info,.sak-info,.abh-info,.dee-info{
+            margin-left: 1.4rem;
+        }
+        .sar-info img,.sru-info img,.sak-info img,.abh-info img,.dee-info img{
+            height: 17rem;
+            border-radius: 50%;
+            width: 17rem;
+            background-color: lightblue;
+        }
+    
+        .sar-details,.sru-details,.sak-details,.abh-details,.dee-details{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    
+        .link{
+            text-decoration: none;
+            color: #2b315b;
+        }
+    
+        .blank{
+            background-color: lightblue;
+        }
+    /*& Footer */
+    .footer-details{
+        height: 40rem;
+        width: 120rem;
+    }
+    
+    
+    .address-details ul li{
+        margin: 0.8rem;
+        font-size: 2.3rem;
+    }
+    
+    .company-title{
+        font-size: 2.3rem;
+    }
+    
+    .company-details li{
+        list-style: none;
+        font-size: 0.9rem;
+        margin: 0.8rem;
+        text-align: left;
+        font-size: 1.8rem;
+    }
+    
+    .more-title{
+        font-size: 2.3rem;
+    }
+    
+    
+    .more-details li{
+        list-style: none;
+        font-size: 1.8rem;
+        margin: 0.8rem;
+        text-align: left;
+    }
+    
+    .social-media p{
+        margin-bottom: 0.5rem;
+        text-align: center;
+        font-size: 2.3rem;
+    }
+    .social-links{
+        font-size: 1.8rem;
+    }
+    
+    .social-links i{
+        margin-left: 1rem;
+        text-align: left;
+    }
+    
+    .copyright-info{
+        height: 4rem;
+        flex-wrap: wrap;
+        width: 120rem;
+        font-size: 2rem;
     }
 }
