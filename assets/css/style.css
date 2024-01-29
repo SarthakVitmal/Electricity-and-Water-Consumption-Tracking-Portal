@@ -1,11 +1,945 @@
-* {
-  font-family: "Hellix" !important;
+*{
+  padding: 0rem;
   margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+/*& Navbar */
+.navbar{
+  height: 5.5rem;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
-body {
-  scroll-behavior: smooth;
-}/*# sourceMappingURL=style.css.map */
+.navbar ul{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navbar ul li{
+  list-style: none;
+  margin: 1.4rem;
+  font-size: 1.1rem;
+  color:#1c1c1c;
+  display: flex;
+  align-items: center;
+}
+
+.login,.btn{
+  padding: 0.7rem;
+  width: 7rem;
+  border-radius: 1.5rem;
+  background-color: #200cfe;
+  color: #FFF;
+  font-size: 1rem;
+  border: none;
+}
+
+.logoimage{
+  height: 3rem;
+}
+
+.navbar a:hover{
+  background-color: #200cfe;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 1rem;
+  opacity: 1; /* Fully opaque on hover */
+  text-decoration: none;
+}
+
+.navbar a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 1rem;
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+}
+
+/*&HeroSection */
+.superimage{
+  background-color: blue;
+  background-size: cover;
+  height: 90vh;
+  margin-top: 6rem;
+  width: 100%;
+
+}
+
+.superimageheading{
+  color: white;
+  font-size: 1.5rem;
+  padding: 7rem 0rem 0rem 7rem;
+  font-weight: bold;
+}
+
+.superimageheading2{
+  color: #fff;
+  font-size: 3rem;
+  padding: 1rem 0rem 0rem 7rem;
+  font-weight: bolder;
+}
+
+.superimagelowerheading{
+  color: white;
+  font-size: 1.3rem;
+  padding: 1rem 0rem 0rem 7rem;
+}
+
+.start_tracking{
+  width: 10rem;
+  padding: 1rem 0rem 0rem 7rem;
+  margin-top: 1rem;
+}
+
+.start{
+  width: 10rem;
+  background-color: #fff;
+
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.start a{
+  color: blue;
+  text-decoration:none;
+  font-size: 1.1rem;
+}
+
+.start:hover{
+  background-color:#2b315b;
+  color: white;
+}
+
+
+/* &process */
+.process{
+  height: 10rem;
+  background-color: #151a7b;
+  display: flex;
+  justify-content: space-evenly;
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+.step1-login,.step2-providedata,.step3-trackusage,.step4-save,.step5-reducebills{
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  position: relative;
+  top: -5rem;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.login-img,.providedata-img,.trackusage-img,.save-img,.reducebills-img{
+  background-image: url("https://icon-library.com/images/login-icon/login-icon-13.jpg");
+  background-size: cover;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.providedata-img{
+  background-image: url("https://th.bing.com/th/id/OIP.criSsq2qPw2JOCmKg7s5kAHaHa?rs=1&pid=ImgDetMain");
+}
+
+.trackusage-img{
+  background-image: url('https://pluspng.com/img-png/water-usage-png-first-incentive-payment-by-a-utility-500.png');
+}
+
+.save-img{
+  background-image: url('https://media.istockphoto.com/vectors/ecology-sign-energy-saving-lamp-symbol-icon-eco-friendly-concept-vector-id878252338?k=6&m=878252338&s=170667a&w=0&h=Zi9F2CulTdNaRfBO_PzMDvau3JO9xs4P-Pz53hPa5jE=');
+}
+
+.reducebills-img{
+  background-image: url('https://image.shutterstock.com/image-vector/water-utility-bill-icon-clipart-260nw-1228852303.jpg');
+}
+.caption{
+  color: #FFF;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.step1-login:hover,.step2-providedata:hover,.step3-trackusage:hover,.step4-save:hover,.step5-reducebills:hover{
+  transform: scale(1.05);
+}
+
+
+
+/* &Water Saving Section */
+.water-saving-benefits{
+  height: 40rem;
+  background-color: #eff3f9;
+  width: 94.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.water-saving-benefits section{
+  height: 40rem;
+  width: 23.6rem;
+  background-color: #0c1228;
+  margin-right: 0px;
+}
+
+.content1{
+  margin-top: 14rem;
+  padding: 20px;
+}
+
+.content-section1{
+  background-image: linear-gradient(lightblue,darkblue);
+  background-size: cover;
+  opacity: 0.9;
+}
+.content-section2{
+  background-image: linear-gradient(#6fb1e1,#bdc3c7);
+  background-size: cover;
+  opacity: 0.9;
+}
+.content-section3{
+  background-image: linear-gradient(#00FFFF,#002D62);
+  background-size: cover;
+  opacity: 0.9;
+}
+.content-section4{
+  background-image: linear-gradient(lightgreen,#00308F);
+  background-size: cover;
+  opacity: 0.9;
+}
+.content-heading{
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+.content-description{
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 8px;
+  margin-top: 10px;
+}
+
+.content-section1,.content-section2,.content-section3,.content-section4{
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  }
+.content-section1:hover,.content-section2:hover,.content-section3:hover,.content-section4:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+/*& About */
+.about{
+  height: 24rem;
+  background-color: #eff3f9 ;
+  padding: 3rem;
+  width: 93.5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-section-content{
+  width: 50%;
+  font-size: 1.0rem;
+  margin-left: 3rem;
+}
+.about-heading{
+  display: block;
+  font-size: 2rem;
+  color: #2b315b;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.about-heading-story{
+  display: block;
+  font-size: 1.5rem;
+  color: #2b315b;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.right-section-content{
+  margin-left: 5rem;
+  width: 40%;
+}
+
+.first-row{
+  display: flex;
+  margin-bottom: 4rem;
+}
+.first-row img{
+  border-radius: 100%;
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+.water-tracking{
+  height: 8rem;
+  flex-direction: column;
+  padding: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+
+}
+.water-tracking img,.electricty-tracking img,.target img,.gogreen img{
+  height: 8rem;
+  margin-left: 0.8rem;
+}
+
+.electricty-tracking{
+  height: 8rem;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-left: 100px;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.second-row{
+  display: flex;
+  animation: scaleUp 0.5s ease-in-out;
+}
+
+.gogreen{
+  height: 8rem;
+  flex-direction: column;
+  padding: 0.5rem;
+  margin-left: 120px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.target{
+  height: 8rem;
+  flex-direction: column;
+  padding: 0.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+.bluecolor-text{
+  color: #2b315b;
+  text-align: center;
+}
+.about-text{
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.water-tracking:hover,
+.electricty-tracking:hover,.gogreen:hover,.target:hover {
+  transform: scale(1.05);
+}
+/* &Team */
+.team{
+  height: 25rem;
+  background-color: #eff3f9;
+}
+
+.team-info{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.team-heading{
+  font-size: 2.2rem;
+  color: #2b315b;
+  text-align: center;
+  text-decoration: underline;
+}
+.sar-info,.sru-info,.sak-info,.abh-info,.dee-info{
+  margin-left: 1rem;
+}
+.sar-info img,.sru-info img,.sak-info img,.abh-info img,.dee-info img{
+  height: 15rem;
+  border-radius: 50%;
+  width: 17rem;
+}
+
+.sar-details,.sru-details,.sak-details,.abh-details,.dee-details{
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.link{
+  text-decoration: none;
+  color: #2b315b;
+}
+
+.name{
+  color: #200cfe;
+}
+.profession{
+  color: #0c1228;
+  font-size: 0.9rem;
+}
+
+.sar-info img:hover,.sru-info img:hover,.sak-info img:hover,.abh-info img:hover,.dee-info img:hover{
+  opacity: 0.7;
+}
+
+
+
+/* & Contact */
+.contactus{
+  height: 40rem;
+  background-color: #eff3f9;
+  padding: 90px;
+  display: flex;
+}
+.contactus h2{
+  font-size: 1.8rem;
+  color: #151a7b;
+
+}
+.form-section{
+  height: 28rem;
+  background-color: #fff;
+  width: 70%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 5rem;
+  border-bottom-right-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.form-section label{
+  font-size: 1.2rem;
+}
+.form-section input{
+  width: 400px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 3px;
+}
+.form-section textarea{
+  width: 400px;
+  border-radius: 5px;
+  height: 100px;
+  font-size: 1rem;
+  padding:3px;
+}
+.name-section,.mobile-section,.desc-section{
+  margin-top: 20px;
+}
+
+.contact-more-details{
+  height: 26rem;
+  background-color: #151a7b;
+  width: 30%;
+  position: relative;
+  right: 100px;
+  top: 60px;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.location-details,.mobile-details,.email-details{
+  display: flex;
+  padding: 5px;
+}
+
+.heading{
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.location-icon{
+  font-size: 2rem;
+}
+.location-heading{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.location-desc{
+  color: #fff;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.email-details{
+  margin-top: 20px;
+}
+.mobile-details{
+  margin-top: 20px;
+}
+
+.submit{
+  padding: 10px;
+  width: 95px;
+  background-color: #200cfe;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+}
+/*& Footer */
+.footer-details{
+  height: 12rem;
+  background-color:#0c1228;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-top: auto; 
+}
+
+.address-details{
+  color: white;
+}
+
+footer a{
+  text-decoration: none;
+}
+.address-details ul li{
+  list-style: none;
+  text-align: left;
+  margin: 0.8rem;
+  font-size: 1rem;
+}
+
+.company-title{
+  font-size: 1.2rem;
+  color: white;
+}
+
+.company-details li{
+  color: white;
+  list-style: none;
+  font-size: 0.9rem;
+  margin: 0.8rem;
+  text-align: left;
+}
+
+.more-title{
+  font-size: 1.2rem;
+  color: white;
+}
+
+
+.more-details li{
+  color: white;
+  list-style: none;
+  font-size: 0.9rem;
+  margin: 0.8rem;
+  text-align: left;
+}
+
+.social-media p{
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.social-links{
+  font-size: 1.5rem;
+}
+
+.social-links i{
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.copyright-info{
+  height: 2rem;
+  background-color:#0c1228;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/*&Responsive */
+  @media(min-width:350px) and (max-width:935px){
+      /*& Navbar */
+  .navbar{
+      height: 10rem;
+      width: 100%;
+  }
+
+  .navbar ul li{
+      margin: 1.4rem;
+      font-size: 2.5rem;
+  }
+
+  .navbar ul li:hover{
+      text-decoration: underline;
+  }
+
+  .login,.btn{
+      padding: 2rem;
+      width: 14rem;
+      border-radius: 1.5rem;
+      font-size: 2.5rem;
+  }
+
+
+.navbar ul li a{
+  text-decoration: none;
+  }
+  .superimage{
+      width: 90rem;
+      height: 50rem;
+      padding: 20rem 0rem 20rem 5rem;
+  }
+  
+  .superimageheading{
+      font-size: 3rem;
+  }
+  
+  .superimageheading2{
+      font-size: 5rem;
+      padding: 1rem 0rem 0rem 7rem;
+      font-weight: bolder;
+  }
+  
+  .superimagelowerheading{
+      font-size: 2.5rem;
+      padding: 1rem 0rem 0rem 7rem;
+  }
+  
+  .start_tracking{
+      width: 10rem;
+      padding: 1rem 0rem 0rem 7rem;
+      margin-top: 1rem;
+  }
+  
+  .start{
+      width: 24rem;
+      height: 8rem;
+  }
+  
+  .start a{
+      font-size: 2.5rem;
+  }
+
+  /* &process */
+  .process{
+      height: 10rem;
+      width: 95rem;
+  }
+
+  .step1-login,.step2-providedata,.step3-trackusage,.step4-save,.step5-reducebills{
+      height: 10rem;
+      width: 10rem;
+      position: relative;
+      top: -5rem;
+  }
+
+  .login-img,.providedata-img,.trackusage-img,.save-img,.reducebills-img{
+      height: 10rem;
+  }
+
+  .caption{
+      margin-top: 0.5rem;
+  }
+
+  /* &Water Saving Section */
+  .water-saving-benefits{
+      height: 40rem;
+      background-color: #eff3f9;
+      width: 96rem;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  .water-saving-benefits section{
+      height: 40rem;
+      width: 23.8rem;
+  }
+  
+  .content1{
+      margin-top: 14rem;
+      padding: 20px;
+  }
+  
+  .content-heading{
+      font-size: 2rem;
+      font-weight: 500;
+  }
+  .content-description{
+      font-size: 1rem;
+      margin-left: 8px;
+      margin-top: 10px;
+  }
+  
+  /*& About */
+  .about{
+      height: 80rem;
+      width: 90rem;
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .left-section-content{
+      width: 50%;
+      font-size: 1.6rem;
+      margin-left: 3rem;
+  }
+  .about-heading{
+      font-size: 2.5rem;
+  }
+  .about-heading-story{
+      font-size: 2.5rem;
+  }
+  .right-section-content{
+      margin-left: 5rem;
+      width: 40%;
+  }
+
+  .first-row,.second-row{
+      display: block;
+      margin-bottom: 9rem;
+  }
+  .first-row img{
+      border-radius: 100%;
+  }
+
+  .water-tracking{
+      height: 15rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-bottom: 3rem;
+  }
+  .water-tracking img,.electricty-tracking img,.target img,.gogreen img{
+      height: 15rem;
+      margin-left: 0.8rem;
+  }
+
+  .electricty-tracking,.target{
+      height: 15rem;
+      display: flex;
+  }
+
+  .gogreen{
+      margin-top: 10rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin-left: 0px;
+  }
+  .bluecolor-text{
+      font-size: 2.5rem;
+  }
+  .about-text{
+      font-size: 2rem;
+  }
+
+  /* & Contact */
+  .contactus{
+      height: 40rem;
+      padding: 90px;
+      width: 92rem;
+  }
+  .contactus h2{
+      font-size: 2rem;
+
+  }
+  .form-section{
+      height: 28rem;
+      width: 68%;
+  }
+
+  .form-section label{
+      font-size: 1.5rem;
+  }
+  .form-section input{
+      width: 400px;
+      height: 35px;
+      border-radius: 5px;
+      font-size: 1.3rem;
+      padding: 3px;
+  }
+  .form-section textarea{
+      width: 400px;
+      border-radius: 5px;
+      height: 100px;
+      font-size: 1rem;
+      padding:3px;
+  }
+  .contact-more-details{
+      height: 26rem;
+      width: 30%;
+      position: relative;
+      right: 100px;
+      top: 60px;
+      border-radius: 20px;
+      padding: 30px;
+  }
+
+  .location-details,.mobile-details,.email-details{
+      display: flex;
+      padding: 5px;
+  }
+
+  .heading{
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+  }
+  .location-icon{
+      font-size: 2rem;
+  }
+  .location-heading{
+      font-size: 1.2rem;
+  }
+
+  .location-desc{
+      font-size: 1rem;
+      margin-left: 10px;
+  }
+  .email-details{
+      margin-top: 20px;
+  }
+  .mobile-details{
+      margin-top: 20px;
+  }
+
+  .submit{
+      font-size: 1.2rem;
+  }
+
+  /* &Team */
+  .team{
+      height: 30rem;
+      background-color: #eff3f9;
+      width: 105rem;
+  }
+
+  .team-info{
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem 3rem 2rem 2rem;
+  }
+
+  .team-heading{
+      font-size: 2.5rem;
+      color: #2b315b;
+      text-align: center;
+      text-decoration: underline;
+  }
+  .sar-info,.sru-info,.sak-info,.abh-info,.dee-info{
+      margin-left: 1.4rem;
+  }
+  .sar-info img,.sru-info img,.sak-info img,.abh-info img,.dee-info img{
+      height: 17rem;
+      border-radius: 50%;
+      width: 17rem;
+      background-color: lightblue;
+  }
+
+  .sar-details,.sru-details,.sak-details,.abh-details,.dee-details{
+      text-align: center;
+      font-size: 1.5rem;
+  }
+
+  .link{
+      text-decoration: none;
+      color: #2b315b;
+  }
+
+  .blank{
+      background-color: lightblue;
+  }
+/*& Footer */
+.footer-details{
+  height: 40rem;
+  width: 99rem;
+}
+
+
+.address-details ul li{
+  margin: 0.8rem;
+  font-size: 2.3rem;
+}
+
+.company-title{
+  font-size: 2.3rem;
+}
+
+.company-details li{
+  list-style: none;
+  font-size: 0.9rem;
+  margin: 0.8rem;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.more-title{
+  font-size: 2.3rem;
+}
+
+
+.more-details li{
+  list-style: none;
+  font-size: 1.8rem;
+  margin: 0.8rem;
+  text-align: left;
+}
+
+.social-media p{
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2.3rem;
+}
+.social-links{
+  font-size: 1.8rem;
+}
+
+.social-links i{
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.copyright-info{
+  height: 4rem;
+  flex-wrap: wrap;
+  width: 105rem;
+  font-size: 2rem;
+}
+}
+
+@media(min-width:400px) and (max-width:935px){
+  .superimage{
+      width: 100rem;
+      height: 50rem;
+      padding: 20rem 0rem 20rem 5rem;
+  }
+  .process{
+      height: 10rem;
+      width: 105rem;
+      background-color: #151a7b;
+      display: flex;
+      justify-content: space-evenly;
+  }
+  .water-saving-benefits{
+      height: 40rem;
+      background-color: #eff3f9;
+      width: 104rem;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .water-saving-benefits section{
+      height: 40rem;
+      width: 26rem;
+      background-color: #0c1228;
+      margin-right: 0px;
+  }
+}
