@@ -11,7 +11,6 @@
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -26,3 +25,9 @@ introduction, Problem?, Solution?
 ## Getting Started
 
 instructions on how to get the project up and running on a local machine.
+
+## Usage
+
+
+## Contributing
+
