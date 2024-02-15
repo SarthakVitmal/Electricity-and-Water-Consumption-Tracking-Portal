@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(lightblue, darkblue);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #004080;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: medium;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #004080;
+}
+
+.add-devices{
+    background-color: #0066cc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.submit{
+    background-color: #0066cc;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.devices input{
+    width: 30%;
+    font-size: 15px;
+}
+
+.device1{
+    justify-content: space-between;
+}
+
+@media (min-width:370px) and (max-width:950px){
+    .devices input{
+        width: 30%;
+        font-size: 10px;
+    }   
+}
