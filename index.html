@@ -14,8 +14,20 @@
     <link rel="stylesheet" href="style.css">
     <title>EcoTrack</title>  
 </head>
+<style>
+    .vol-button{
+        padding: 10px;
+        background-color: #fff;
+        border: none;
+        font-size: 18px;
+    }
+    .vol-button:hover{
+        background-color: blue;
+        color: #fff;
+        border-radius: 20px;
+    }
+</style>
 <body>
-    
     <!-- Nav bar section -->
     <button id="toggleBtn" class="toggle-btn"><i class="fa-solid fa-bars"></i></button>
     <nav class="navbar">
@@ -25,9 +37,13 @@
         <li><a class="aboutus" href="#">About Us</a></li>
         <li><a class="contact-btn" href="#">Contact Us</a></li>
         <li><button class="login btn">Login</button></li>
+        <li><button class="vol-button" onclick="playAudio()"><i class="fa-solid fa-volume-high"></i>
+            <audio class="welcomeAudio">
+                <source src="audio.mp3" type="audio/mp3" autoplay>
+            </audio></button>
+        </li>
     </ul>
     </nav>
-    
     <!-- Superimage section -->
     <section class="superimage ">
         <p class="superimageheading">OPEN THE DOOR FOR BETTER LIVING</p>
@@ -91,12 +107,7 @@
         </section>
         
     </section>
-    <div>
-        <audio class="welcomeAudio">
-            <source src="audio.mp3" type="audio/mp3" autoplay>
-        </audio>
-        <button onclick="playAudio()">Play Audio</button>
-    </div>
+    
     
 
     <hr>
