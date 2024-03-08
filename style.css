@@ -15,6 +15,7 @@ body{
     top: 0;
     z-index: 1000;
     width: 100%;
+    
 }
 
 .navbar ul{
@@ -186,7 +187,7 @@ body{
 
 .water-saving-benefits section{
     height: 40rem;
-    width: 23.6rem;
+    width: 25%;
     background-color: #0c1228;
 }
 
@@ -243,7 +244,7 @@ body{
     height: 24rem;
     background-color: #eff3f9 ;
     padding: 3rem;
-    width: 93.5%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -337,8 +338,8 @@ body{
 }
 .team-info{
     display: flex;
-    flex-wrap: wrap;
-    padding: 2rem;
+    flex-wrap: ;
+    width: 100%;
     justify-content: space-evenly;
 }
 .team-heading{
@@ -349,6 +350,7 @@ body{
 }
 .sar-info,.sru-info,.sak-info,.abh-info,.dee-info{
     margin-left: 1rem;
+    width: 100%;
 }
 .sar-info img,.sru-info img,.sak-info img,.abh-info img,.dee-info img{
     height: 15rem;
