@@ -338,7 +338,7 @@ body{
 }
 .team-info{
     display: flex;
-    flex-wrap: ;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
 }
