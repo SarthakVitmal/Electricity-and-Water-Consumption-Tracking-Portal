@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DripCalculator</title>
+    <link rel="stylesheet" href="assets/css/drip.css">
+    <style>
+        body{
+            background-image: url("blue.jpeg");
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="head">
+            Drip Calculator: How much water does a leaking faucet waste?
+        </h1>
+        <p>
+            <p>
+                There is no scientific definition of the volume of a faucet drip, but after measuring 
+                a number of kitchen and bathroom sink faucets, for our calculations below (numbers are rounded), 
+                we are going to use 1/4 milliliter (ml) as the volume of a faucet drip. By these drip estimates:
+            </p>
+            <ul>
+                <li><span>One gallon = 15,140 drips</li>
+                <li><span>One liter = 4,000 drips</li>
+            </ul>
+            <p>
+                Looking at it this way, it seems like that drop of water down the drain is pretty insignificant. 
+                Use the form below to see how all those drops flowing in &quot;real time&quot; can add up to a flood.
+            </p>
+        </p>
+        <div class="form">
+            <form method="POST" action="">
+                <div class="options">
+                    <p class="blue">Number of homes</p>
+                    <select class="input" name="Homes">
+                        <option value="1"> 1 home</option>
+                        <option value="2"> 2 homes</option>
+                        <option value="5"> 5 homes</option>
+                        <option value="10"> 10 homes</option>
+                        <option value="50"> 50 homes</option>
+                        <option value="100"> 100 homes</option>
+                        <option value="500"> 500 homes</option>
+                        <option value="1000"> 1,000 homes</option>
+                        <option value="10000"> 10,000 homes</option>
+                        <option value="100000"> 100,000 homes</option>
+                        <option value="1000000"> 1 million homes</option>
+                    </select>
+                </div>
+                <div class="options">
+                    <p class="blue">Number of faucets in each home</p>
+                    <select class="input" name="Faucets">
+                        <option value="1"> 1 faucet</option>
+                        <option value="2"> 2 faucets</option>
+                        <option value="3"> 3 faucets</option>
+                        <option value="4"> 4 faucets</option>
+                        <option value="5"> 5 faucets</option>
+                    </select>
+                </div>
+                <div class="options">
+                    <p class="blue">Number of drips per minute</p>
+                    <select class="input" name="Drips">
+                        <option value="1"> 1 drip/minute</option>
+                        <option value="2"> 2 drips/minute</option>
+                        <option value="3"> 3 drips/minute</option>
+                        <option value="4"> 4 drips/minute</option>
+                        <option value="5"> 5 drips/minute</option>
+                        <option value="10">  10 drips/minute</option>
+                        <option value="20">  20 drips/minute</option>
+                        <option value="30"> 30 drips/minute</option>
+                        <option value="60"> 60 drips/minute</option>
+                        <option value="120"> 120 drips/minute</option>
+                    </select>
+                </div>
+                <div id="submit">
+                    <input class="button" type="button" value="Submit your answers " onclick="">
+                </div>
+                <div id="Results">
+                    <p class="bold">Here's how much water would be wasted : </p>
+                    <div class="Output">
+                        <p class="blue">Drips per day:</p>
+                        <input class="input" type="text" alt="Drips per day:"  name="Dripsday" value=" ">
+                    </div>
+                    <div class="Results">
+                        <p class="blue">Liters per day:</p>
+                        <input class="input" type="text" alt="Liters per day:"  name="Litersday" value=" ">
+                    </div>
+                    <div class="optionResult flex">
+                        <p class="blue">Gallons per day:</p>
+                        <input class="input" type="text" alt="Gallons per day:"  name="Gallonsday" value=" ">
+                    </div>
+                    <div class="optionResult flex">
+                        <p class="blue">Gallons per year:</p>
+                        <input class="input" type="text" alt="Gallons per year:"  name="Gallonsyear" value=" ">
+                    </div>
+            </form>
+        </div>
+        <p>Back to the <a href="water.html">Page</a>.</p>
+    </div>
+
+    <!--<div class="title">
+        <h1>
+            Water Science Activities<br/>Drip Calculator: How much water does a leaking faucet waste?
+        </h1>
+        <div id="rightModal" class="modalCenter hidden">
+          <div class="modal">
+            <div class="modalTitle">
+                <h2>Activity Description</h2>
+                <div class="exit">X</div>
+            </div>
+            <p>
+                There is no scientific definition of the volume of a faucet drip, but after measuring 
+                a number of kitchen and bathroom sink faucets, for our calculations below (numbers are rounded), 
+                we are going to use 1/4 milliliter (ml) as the volume of a faucet drip. By these drip estimates:
+            </p>
+            <ul>
+                <li><span class="blue bold">One gallon = 15,140 drips</li>
+                <li><span class="blue bold">One liter = 4,000 drips</li>
+            </ul>
+            <p>
+                Looking at it this way, it seems like that drop of water down the drain is pretty insignificant. 
+                Use the form below to see how all those drops flowing in &quot;real time&quot; can add up to a flood.
+            </p>
+          </div>
+        </div>
+        <div class="rightContent">
+            <form method="POST" action="">
+                <div class="options">
+                    <div class="option flex">
+                        <p class="bold blue">Number of homes</p>
+                        <select class="inputStyles" name="Homes">
+                            <option value="1"> 1 home</option>
+                            <option value="2"> 2 homes</option>
+                            <option value="5"> 5 homes</option>
+                            <option value="10"> 10 homes</option>
+                            <option value="50"> 50 homes</option>
+                            <option value="100"> 100 homes</option>
+                            <option value="500"> 500 homes</option>
+                            <option value="1000"> 1,000 homes</option>
+                            <option value="10000"> 10,000 homes</option>
+                            <option value="100000"> 100,000 homes</option>
+                            <option value="1000000"> 1 million homes</option>
+                        </select>
+                    </div>
+                      <div class="option flex">
+                        <p class="bold blue">Number of faucets in each home</p>
+                        <select class="inputStyles" name="Faucets">
+                            <option value="1"> 1 faucet</option>
+                            <option value="2"> 2 faucets</option>
+                            <option value="3" selected> 3 faucets</option>
+                            <option value="4"> 4 faucets</option>
+                            <option value="5"> 5 faucets</option>
+                        </select>
+                    </div>
+                      <div class="option flex">
+                      <p class="bold blue">Number of drips per minute</p>
+                      <select class="inputStyles" name="Drips">
+                        <option value="1"> 1 drip/minute</option>
+                        <option value="2"> 2 drips/minute</option>
+                        <option value="3"> 3 drips/minute</option>
+                        <option value="4"> 4 drips/minute</option>
+                        <option value="5"> 5 drips/minute</option>
+                        <option value="10">  10 drips/minute</option>
+                        <option value="20">  20 drips/minute</option>
+                        <option value="30"> 30 drips/minute</option>
+                        <option value="60"> 60 drips/minute</option>
+                        <option value="120"> 120 drips/minute</option>
+                    </select>
+                    </div>
+                    <div id="submit" class="flex">
+                        <input class="button" type="button" value="Submit your answers " onclick="computeAnswers(this.form)">
+                    </div>
+                </div>
+                  <div id="optionResults">
+                    <p class="bold">Here's how much water would be wasted (numbers may be rounded):</p>
+                    <div class="optionResult flex">
+                        <p class="bold blue">Drips per day:</p>
+                        <input class="inputStyles" type="text" alt="Drips per day:"  name="Dripsday" value=" ">
+                    </div>
+                    <div class="optionResult flex">
+                        <p class="bold blue">Liters per day:</p>
+                        <input class="inputStyles" type="text" alt="Liters per day:"  name="Litersday" value=" ">
+                    </div>
+                    <div class="optionResult flex">
+                        <p class="bold blue">Gallons (US) per day:</p>
+                        <input class="inputStyles" type="text" alt="Gallons per day:"  name="Gallonsday" value=" ">
+                    </div>
+                    <div class="optionResult flex">
+                        <p class="bold blue">Gallons (US) per year:</p>
+                        <input class="inputStyles" type="text" alt="Gallons per year:"  name="Gallonsyear" value=" ">
+                    </div>
+                </div>
+            -->
+</body>
+</html>
