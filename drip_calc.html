@@ -75,7 +75,7 @@
                     </select>
                 </div>
                 <div id="submit">
-                    <input class="button" type="button" value="Submit your answers " onclick="">
+                    <input class="button" type="button" value="Submit your answers " onclick="computeAnswers(this.form)">
                 </div>
                 <div id="Results">
                     <p class="bold">Here's how much water would be wasted : </p>
@@ -95,9 +95,34 @@
                         <p class="blue">Gallons per year:</p>
                         <input class="input" type="text" alt="Gallons per year:"  name="Gallonsyear" value=" ">
                     </div>
+            </div>
             </form>
-        </div>
-        <p>Back to the <a href="water.html">Page</a>.</p>
+        <p>Back to the <a href="water.html"> Water Page</a>.</p>
     </div>
+    <script>
+        function addCommas(x) {
+        var parts = x.toString().split(".");
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        return parts.join(".");
+        }
+        function computeAnswers(form) {
+         Item = form.Drips.selectedIndex;
+         Fdrips = form.Drips.options[Item].value;
+         Item = form.Faucets.selectedIndex;
+         Ffaucets = form.Faucets.options[Item].value;
+         Item = form.Homes.selectedIndex;
+         Fhomes = form.Homes.options[Item].value;
+
+        Dripsday = 1440 * parseInt(Fdrips) * parseInt(Ffaucets) * parseInt(Fhomes);
+        Litersday = Dripsday / 4000;
+        Gallonsday = Litersday / 3.785;
+        Gallonsyear =  Gallonsday*365;
+
+        form.Dripsday.value = addCommas(Dripsday);
+        form.Litersday.value = addCommas(Litersday.toFixed(1));
+        form.Gallonsday.value = addCommas(Gallonsday.toFixed(1));
+        form.Gallonsyear.value = addCommas(Gallonsyear.toFixed(1));
+    }
+</script>
 </body>
 </html>
