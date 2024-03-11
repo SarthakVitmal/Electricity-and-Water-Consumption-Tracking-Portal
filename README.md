@@ -1,5 +1,3 @@
- Pleade Update Readme file... TEMPLATE
-
 # EcoTrack
 
  A web platfrom which will help to track and reduce water and electricity consumption
@@ -16,15 +14,23 @@
 
 introduction, Problem?, Solution?
 
+## Visuals
+
+Video Demo: 
+
 ## Features
 
 - Feature 1
 - Feature 2
 - ...
 
-## Getting Started
+## Installation
 
-instructions on how to get the project up and running on a local machine.
+1. ...
+2. ....
+3. ....
+4. ....
+5. Go to http://localhost    to use the website
 
 ## Usage
 
