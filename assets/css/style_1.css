@@ -1,234 +1,177 @@
+/* Importing 'Poppins' font from Google Fonts API */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Global reset for margin, padding, box-sizing, and font-family */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Setting default font family */
 }
 
+/* Define custom CSS variables for colors */
 :root {
-    --mainColor: #5fa5f6;
-    --whiteColor: #ffffff;
-    --titleColor: #555555;
-    --labelColor: #252429;
+    --mainColor: #5fa5f6; /* Main color variable */
+    --whiteColor: #ffffff; /* White color variable */
+    --titleColor: #555555; /* Title color variable */
+    --labelColor: #252429; /* Label color variable */
 }
 
+/* Base styles for HTML elements */
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+    font-size: 62.5%; /* Base font size */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
 }
 
+/* Body styles including background gradient and image */
 body {
-    background: linear-gradient(to right, #0e0339, var(--mainColor));
-    font-weight: 400;
-    min-height: 100vh;
-    display: grid;
-    place-content: center;
-    overflow: hidden;
+    background: linear-gradient(to right, #0e0339, var(--mainColor)); /* Background gradient */
+    background-image: url(../image/water3.jpg) !important; /* Background image */
+    font-weight: 400; /* Default font weight */
+    min-height: 100vh; /* Minimum height of viewport */
+    display: grid; /* Use grid for layout */
+    place-content: center; /* Center content vertically and horizontally */
+    overflow: hidden; /* Hide overflow */
 }
 
+/* Wrapper styles for containing the form */
 .wrapper {
-    position: relative;
-    width: 35rem;
-    height: 50rem;
+    position: relative; /* Relative positioning */
+    width: 35rem; /* Default width */
+    height: 50rem; /* Default height */
 }
 
+/* Media query for adjusting wrapper width on larger screens */
 @media(min-width: 540px) {
     .wrapper {
-        width: 40rem;
+        width: 40rem; /* Adjusted width for larger screens */
     }
 }
 
+/* Form container styles */
 .wrapper .form-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: var(--whiteColor);
-    border-radius: .5rem;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    position: absolute; /* Absolute positioning */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: var(--whiteColor); /* Background color */
+    border-radius: 8px; /* Border radius */
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2); /* Box shadow */
 }
 
+/* Form heading styles */
 .wrapper .form-container form h2 {
-    font-size: 3rem;
-    text-align: center;
-    text-transform: capitalize;
-    color: var(--titleColor);
+    font-size: 3rem; /* Heading font size */
+    text-align: center; /* Center align */
+    text-transform: capitalize; /* Capitalize text */
+    color: var(--titleColor); /* Text color */
 }
 
+/* Form group styles */
 .wrapper .form-container form .form-group {
-    position: relative;
-    width: 32rem;
-    margin: 3rem 0;
+    position: relative; /* Relative positioning */
+    width: 32rem; /* Width */
+    margin: 3rem 0; /* Margin */
 }
 
+/* Icon and label styles within form group */
 .wrapper .form-container form .form-group i,
 .wrapper .form-container form .form-group label {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.6rem;
-    text-transform: capitalize;
-    color: var(--labelColor);
-    padding: 0 .5rem;
-    pointer-events: none;
-    transition: all .5s ease;
+    position: absolute; /* Absolute positioning */
+    top: 50%; /* Align to vertical center */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    font-size: 1.6rem; /* Font size */
+    text-transform: capitalize; /* Capitalize text */
+    color: var(--labelColor); /* Text color */
+    padding: 0 .5rem; /* Padding */
+    pointer-events: none; /* Disable pointer events */
+    transition: all .5s ease; /* Transition effect */
 }
 
+/* Icon styles */
 .wrapper .form-container form .form-group i {
-    left: .5rem;
+    left: .5rem; /* Positioning */
 }
 
+/* Label styles */
 .wrapper .form-container form .form-group label {
-    left: 2.5rem;
+    left: 2.5rem; /* Positioning */
 }
 
+/* Input field styles */
 .wrapper .form-container form .form-group input {
-    width: 100%;
-    height: 4rem;
-    padding: 0 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    border: .1rem solid var(--labelColor);
-    font-size: 1.6rem;
-    color: var(--labelColor);
-    background: transparent;
+    width: 100%; /* Full width */
+    height: 4rem; /* Height */
+    padding: 0 1rem; /* Padding */
+    border-radius: .5rem; /* Border radius */
+    border: none; /* No border */
+    outline: none; /* No outline */
+    border: .1rem solid var(--labelColor); /* Border color */
+    font-size: 1.6rem; /* Font size */
+    color: var(--labelColor); /* Text color */
+    background: transparent; /* Transparent background */
 }
 
+/* Styles for labels and icons when input is focused or contains value */
 form .form-group input:focus~label,
 form .form-group input:valid~label,
 form .form-group input:focus~i,
 form .form-group input:valid~i {
-    top: 0 !important;
-    font-size: 1.2rem !important;
-    background-color: var(--whiteColor);
+    top: 0 !important; /* Adjust top position */
+    font-size: 1.2rem !important; /* Adjust font size */
+    background-color: var(--whiteColor); /* Background color */
 }
 
+/* Styles for 'forgot password' link */
 .wrapper .form-container form .forgot-pass {
-    margin: -1.5rem 0 1.5rem;
+    margin: -1.5rem 0 1.5rem; /* Margin */
 }
 
+/* Styles for 'forgot password' link text */
 .wrapper .form-container form .forgot-pass a {
-    color: var(--labelColor);
-    text-decoration: none;
-    font-size: 1.4rem;
-    text-transform: capitalize;
-    transform: all .5s ease;
+    color: var(--labelColor); /* Text color */
+    text-decoration: none; /* No decoration */
+    font-size: 1.4rem; /* Font size */
+    text-transform: capitalize; /* Capitalize text */
+    transform: all .5s ease; /* Transition effect */
 }
 
+/* Hover styles for 'forgot password' link */
 .wrapper .form-container form .forgot-pass a:hover {
-    color: var(--mainColor);
+    color: var(--mainColor); /* Hover text color */
 }
 
+/* Button styles */
 .wrapper .form-container form .btn {
-    background: linear-gradient(to right, #0e0339, var(--mainColor));
-    color: var(--whiteColor);
-    text-transform: capitalize;
-    width: 100%;
-    height: 4rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    outline: none;
-    border: none;
-    border-radius: .5rem;
-    cursor: pointer;
-    box-shadow: 0 .2rem 1rem rgba(0 0 0 / .4);
+    background: linear-gradient(to right, #0e0339, var(--mainColor)); /* Button background gradient */
+    color: var(--whiteColor); /* Text color */
+    text-transform: capitalize; /* Capitalize text */
+    width: 100%; /* Full width */
+    height: 4rem; /* Height */
+    font-size: 1.6rem; /* Font size */
+    font-weight: 500; /* Font weight */
+    outline: none; /* No outline */
+    border: none; /* No border */
+    border-radius: .5rem; /* Border radius */
+    cursor: pointer; /* Cursor pointer */
+    box-shadow: 0 .2rem 1rem rgba(0 0 0 / .4); /* Box shadow */
 }
 
+/* Styles for links within a paragraph */
 .wrapper .form-container form .link {
-    text-align: center;
-    font-size: 1.4rem;
-    color: var(--labelColor);
-    margin: 2.5rem 0;
+    text-align: center; /* Center align */
+    font-size: 1.4rem; /* Font size */
+    color: var(--labelColor); /* Text color */
+    margin: 2.5rem 0; /* Margin */
 }
 
+/* Styles for links within a paragraph when hovered */
 .wrapper .form-container form .link a {
-    text-transform: capitalize;
-    color: var(--mainColor);
-    text-decoration: none;
-    font-weight: 600;
-    transition: all .5s ease;
-}
-
-.wrapper .form-container form .link a:hover {
-    color: #0c0c0c;
-}
-
-.wrapper .sign-up {
-    transform: rotate(7deg);
-}
-
-.wrapper.animated-signin .form-container.sign-in {
-    animation: signin-flip 1s ease-in-out forwards;
-}
-
-@keyframes signin-flip {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(-50rem) scale(1.1);
-    }
-
-    100% {
-        transform: translateX(0) rotate(7deg) scale(1);
-    }
-}
-
-.wrapper.animated-signin .form-container.sign-up {
-    animation: rotatecard .7s ease-in-out forwards;
-}
-
-@keyframes rotatecard {
-    0% {
-        transform: rotate(7deg);
-    }
-
-    100% {
-        transform: rotate(0);
-        z-index: 1;
-    }
-}
-
-.wrapper.animated-signup .form-container.sign-up {
-    animation: signup-flip 1s ease-in-out forwards;
-}
-
-@keyframes signup-flip {
-    0% {
-        transform: translateX(0);
-        z-index: 1;
-    }
-
-    50% {
-        transform: translateX(50rem) scale(1.1);
-    }
-
-    100% {
-        transform: translateX(0) rotate(7deg) scale(1);
-    }
-}
-
-.wrapper.wrapper.animated-signup .form-container.sign-in {
-    transform: rotate(7deg);
-    animation: rotatecard .7s ease-in-out forwards;
-    animation-delay: .3s;
-}
-
-@keyframes rotatecard {
-    0% {
-        transform: rotate(7deg);
-    }
-
-    100% {
-        transform: rotate(0);
-        z-index: 1;
-    }
+    text-transform: capitalize; /* Capitalize text */
+    color: var(--mainColor); /* Link color */
+    text-decoration: none; /* No decoration */
 }
