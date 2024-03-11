@@ -7,15 +7,15 @@ div.container{
     width: 100%;
 }
 h1.head{
-    color:navy;
+    color:rgb(0, 0, 0);
     font-weight: 600;
 }
 ul{
-    color: navy;
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 p.blue{
-    color: navy;
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 div.form{
@@ -59,5 +59,5 @@ input.input{
     color: #404040;
     font-size: 1em;
     background: #ffff;
-    width: 100%;
+    width: 98%;
 }
