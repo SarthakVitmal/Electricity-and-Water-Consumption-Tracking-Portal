@@ -21,7 +21,7 @@
         $lighting_type = $_POST['lighting_type'];
         $solar_panels = $_POST['solar_panels'];
         $unplug_electronics = $_POST['unplug_electronics']; 
-        $energy_audit = $_POST['energy_audit'];
+        $units_consumped = $_POST['units_consumped'];
         $device_name = $_POST['device_name'];
         $quantity = $_POST['quantity'];
         $duration = $_POST['duration'];
@@ -32,25 +32,9 @@
         $quantity3 = $_POST['$quantity3'];
         $duration3 = $_POST['$duration3'];
 
-        $sql = $sql = "INSERT INTO `elec_form` (`persons`, `energy_efficient_appliances`, `heating_cooling`, `laundry_frequency`, `turn_off_lights`, `lighting_type`, `solar_panels`, `unplug_electronics`, `energy_audit`, `device_name`, `quantity`, `duration`, `device_name2`, `quantity2`, `duration2`, `device_name3`, `quantity3`, `duration3`) 
-        VALUES ('$persons', '$energy_efficient_appliances', '$heating_cooling', '$laundry_frequency', '$turn_off_lights', '$lighting_type', '$solar_panels', '$unplug_electronics', '$energy_audit', '$device_name', '$quantity', '$duration', '$device_name2', '$quantity2', '$duration2', '$device_name3', '$quantity3', '$duration3')";
-        
-
+        $sql = $sql = "INSERT INTO `elec_form` (`persons`, `energy_efficient_appliances`, `heating_cooling`, `laundry_frequency`, `turn_off_lights`, `lighting_type`, `solar_panels`, `unplug_electronics`, `units_consumped`, `device_name`, `quantity`, `duration`, `device_name2`, `quantity2`, `duration2`, `device_name3`, `quantity3`, `duration3`) 
+        VALUES ('$persons', '$energy_efficient_appliances', '$heating_cooling', '$laundry_frequency', '$turn_off_lights', '$lighting_type', '$solar_panels', '$unplug_electronics', '$units_consumped', '$device_name', '$quantity', '$duration', '$device_name2', '$quantity2', '$duration2', '$device_name3', '$quantity3', '$duration3')";
 
         $result = mysqli_query($conn, $sql);
-
-        // if ($conn->query($sql) == TRUE){
-        //     $userid = $conn->insert_id;
-        //     foreach ($_POST["device_name"] as $key => $device_name){
-        //         $quantity = $_POST["quantity"][$key];
-        //         $duration = $_POST["duration"][$key];
-        //         $query = "INSERT INTO `user_devices` (`device_name`, `quantity`, `duration`)
-        //                   VALUES ('$device_name', '$quantity', '$duration')";
-        //         $conn->query($query);  
-        //     }
-        //     echo "Form data submitted successfully";
-        // } else {
-        //     echo "Error: " . $conn->error;
-        // }
     }
 ?>
