@@ -67,13 +67,8 @@
                     <label>No</label><br>
                 </div>
 
-                <label>9. Have you conducted an energy audit for your home?</label>
-                <div>
-                    <input type="radio" name="energy_audit" value="yes">
-                    <label>Yes</label>
-                    <input type="radio" name="energy_audit" value="no">
-                    <label>No</label><br>
-                </div>
+                <label>9. Electricity Units consumed in last month in KW/HR(Mention on Electricity Bill)</label>
+                <input type="number" name="units_consumed" placeholder="Example : 100"><br>
 
                 <label>10. Enter the devices name you use daily along with the duration.</label>
                 <div class="devices" id="devices-container">
