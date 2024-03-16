@@ -1,63 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    overflow-x: hidden;
 
-body{
-    background-image: url('../image/blue.jpeg') !important;
 }
-div.container{
-    font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
+
+body {
+    color: #404040; /* Setting a default text color */
 }
-h1.head{
-    color:rgb(0, 0, 0);
+
+.container {
+    width: 90%; /* Adjusted width for better readability */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Added padding for better spacing */
+}
+
+.head {
+    color: navy;
+    font-weight: 600;
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Added spacing below the heading */
+}
+
+.blue {
     font-weight: 600;
 }
-ul{
-    color: rgb(0, 0, 0);
-    font-weight: 600;
+
+.form {
+    margin-top: 40px; /* Adjusted margin for better spacing */
 }
-p.blue{
-    color: rgb(0, 0, 0);
-    font-weight: 600;
-}
-div.form{
-    margin-block-start: 40px;
-}
-select.input{
+
+.input {
     text-align: center;
     border-radius: 8px;
-    padding: 8px;
+    padding: 10px; /* Increased padding for better touch experience */
     border: 1px solid #dadcdb;
-    color: #404040;
     font-size: 1em;
-    background: #ffff;
-    width: 100%;   
+    background: #fff;
+    width: 100%;
+    margin-bottom: 10px; /* Added spacing between input elements */
 }
-input.button{
-    margin-block-start: 20px;
+
+.button {
     background: #003366;
     border: 0;
     color: #fff;
-    font-size: 0.9rem;
-    padding: 10px;
+    font-size: 1rem;
+    padding: 12px; /* Increased padding for better touch experience */
     border-radius: 8px;
     cursor: pointer;
+    width: fit-content; /* Make the button full width */
 }
-#submit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#submit {
+    text-align: center; /* Center align the submit button */
+    margin-bottom: 20px; /* Added spacing below the submit button */
 }
-p.bold{
-    color: black;
+
+.bold {
     font-weight: 700;
     font-size: medium;
 }
-input.input{
-    text-align: center;
-    border-radius: 8px;
-    padding: 8px;
-    border: 1px solid #dadcdb;
-    color: #404040;
-    font-size: 1em;
-    background: #ffff;
-    width: 98%;
+
+/* Added styles for better visualization of results */
+.Output, .Results, .optionResult {
+    margin-bottom: 10px;
+}
+
+.optionResult {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Added hover effect for links */
+a {
+    color: #003366;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width:300px) and (max-width : 940px){
+    .head {
+        color: navy;
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-align: center; /* Center align the heading */
+        margin-bottom: 20px; /* Added spacing below the heading */
+    }
 }

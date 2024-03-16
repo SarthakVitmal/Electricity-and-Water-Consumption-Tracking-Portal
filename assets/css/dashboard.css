@@ -1,0 +1,408 @@
+:root {
+    --white: #fff;
+    --blue: #4b84fe;
+    --colorDark: #1b253d;
+    --colorLight: #99a0b0;
+    --red: #fa5b67;
+    --yellow: #ffbb09;
+    --bg: #f5f5fa;
+    --bgDark: #ede8f0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+html,
+body {
+    color: var(--colorLight);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--bg);
+    font-size: 16px;
+    line-height: 120%;
+    font-family: Open Sans, Helvetica, sans-serif;
+}
+
+.dashboard {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-gap: 0;
+    grid-template-columns: 300px auto;
+    grid-template-rows: 80px auto;
+    grid-template-areas:
+        'menu search'
+        'menu content';
+}
+
+.search-wrap {
+    grid-area: search;
+    background: var(--white);
+    border-bottom: 1px solid var(--bgDark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3em;
+}
+
+.search-wrap .search {
+    height: 40px;
+}
+
+.search-wrap .search label {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.search-wrap .search label svg {
+    display: block;
+}
+
+.search-wrap .search label svg path,
+.search-wrap .search label svg circle {
+    fill: lighten(var(--colorLight), 10%);
+    transition: fill 0.15s ease;
+}
+
+.search-wrap .search input {
+    display: block;
+    padding-left: 1em;
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+
+.search-wrap .search input:focus {
+    background: var(--bg);
+}
+
+.search-wrap .search:hover svg path,
+.search-wrap .search:hover svg circle {
+    fill: lighten(var(--colorDark), 10%);
+}
+
+.search-wrap .user-actions button {
+    border: 0;
+    background: none;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5em;
+}
+
+.search-wrap .user-actions button svg {
+    position: relative;
+    top: 2px;
+}
+
+.search-wrap .user-actions button svg path,
+.search-wrap .user-actions button svg circle {
+    fill: lighten(var(--colorLight), 10%);
+    transition: fill 0.15s ease;
+}
+
+.search-wrap .user-actions button:hover svg path,
+.search-wrap .user-actions button:hover svg circle {
+    fill: lighten(var(--colorDark), 10%);
+}
+
+.menu-wrap {
+    grid-area: menu;
+    padding-bottom: 3em;
+    overflow: auto;
+    background: var(--white);
+    border-right: 1px solid var(--bgDark);
+}
+
+.menu-wrap .user {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0 3em;
+}
+
+.menu-wrap .user .user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.menu-wrap .user .user-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-wrap .user figcaption {
+    margin: 0;
+    padding: 0 0 0 1em;
+    color: var(--colorDark);
+    font-weight: 700;
+    font-size: 0.875em;
+    line-height: 100%;
+}
+
+.menu-wrap nav {
+    display: block;
+    padding: 0 3em;
+}
+
+.menu-wrap nav section {
+    display: block;
+    padding: 3em 0 0;
+}
+
+.menu-wrap nav h3 {
+    margin: 0;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.menu-wrap nav ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-wrap nav li {
+    display: block;
+    padding: 0;
+    margin: 1em 0 0;
+}
+
+.menu-wrap nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--colorLight);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875em;
+    transition: color 0.15s ease;
+}
+
+.menu-wrap nav li a svg {
+    display: block;
+    margin-right: 1em;
+}
+
+.menu-wrap nav li a:hover {
+    color: var(--colorDark);
+}
+
+.menu-wrap nav li a:hover svg path,
+.menu-wrap nav li a:hover svg circle {
+    fill: lighten(var(--colorDark), 10%);
+}
+
+.menu-wrap nav li a.active {
+    color: var(--blue);
+}
+
+.menu-wrap nav li a.active svg path,
+.menu-wrap nav li a.active svg circle {
+    fill: var(--blue);
+}
+
+.content-wrap {
+    grid-area: content;
+    padding: 3em;
+    overflow: auto;
+}
+
+.content-wrap .content-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-wrap .content-head h1 {
+    font-size: 1.375em;
+    line-height: 100%;
+    color: var(--colorDark);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap .content-head .action button {
+    border: 0;
+    background: var(--blue);
+    color: var(--white);
+    width: auto;
+    height: 3.5em;
+    padding: 0 2.25em;
+    border-radius: 3.5em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.15s ease;
+}
+
+.content-wrap .content-head .action button:hover {
+    background-color: darken(var(--blue), 10%);
+}
+
+.content-wrap .info-boxes {
+    padding: 3em 0 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 2em;
+}
+
+.content-wrap .info-boxes .info-box {
+    background: var(--white);
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 3em;
+    border: 1px solid var(--bgDark);
+    border-radius: 5px;
+}
+
+.content-wrap .info-boxes .info-box .box-icon svg {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+.content-wrap .info-boxes .info-box .box-icon svg path,
+.content-wrap .info-boxes .info-box .box-icon svg circle {
+    fill: var(--colorLight);
+}
+
+.content-wrap .info-boxes .info-box .box-content {
+    padding-left: 1.25em;
+    white-space: nowrap;
+}
+
+.content-wrap .info-boxes .info-box .box-content .big {
+    display: block;
+    font-size: 2em;
+    line-height: 150%;
+    color: var(--colorDark);
+}
+
+.content-wrap .info-boxes .info-box.active svg circle,
+.content-wrap .info-boxes .info-box.active svg path {
+    fill: var(--blue);
+}
+
+.content-wrap .person-boxes {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 2em;
+}
+
+.content-wrap .person-boxes .person-box {
+    background: var(--white);
+    height: 320px;
+    text-align: center;
+    padding: 3em;
+    border: 1px solid var(--bgDark);
+    border-radius: 5px;
+}
+
+.content-wrap .person-boxes .person-box:nth-child(2n) .box-avatar .no-name {
+    background: var(--blue);
+}
+
+.content-wrap .person-boxes .person-box:nth-child(5n) .box-avatar .no-name {
+    background: var(--yellow);
+}
+
+.content-wrap .person-boxes .person-box .box-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.content-wrap .person-boxes .person-box .box-avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-wrap .person-boxes .person-box .box-avatar .no-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.5em;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100%;
+    background: var(--red);
+}
+
+.content-wrap .person-boxes .person-box .box-bio {
+    white-space: no-wrap;
+}
+
+.content-wrap .person-boxes .person-box .box-bio .bio-name {
+    margin: 2em 0 0.75em;
+    color: var(--colorDark);
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+.content-wrap .person-boxes .person-box .box-bio .bio-position {
+    margin: 0;
+    font-size: 0.875em;
+    line-height: 100%;
+}
+
+.content-wrap .person-boxes .person-box .box-actions {
+    margin-top: 1.25em;
+    padding-top: 1.25em;
+    width: 100%;
+    border-top: 1px solid var(--bgDark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-wrap .person-boxes .person-box .box-actions button {
+    border: 0;
+    background: none;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.content-wrap .person-boxes .person-box .box-actions button svg {
+    position: relative;
+    top: 2px;
+}
+
+.content-wrap .person-boxes .person-box .box-actions button svg path,
+.content-wrap .person-boxes .person-box .box-actions button svg circle {
+    fill: lighten(var(--colorLight), 10%);
+    transition: fill 0.15s ease;
+}
+
+.content-wrap .person-boxes .person-box .box-actions button:hover svg path,
+.content-wrap .person-boxes .person-box .box-actions button:hover svg circle {
+    fill: lighten(var(--colorDark), 10%);
+}

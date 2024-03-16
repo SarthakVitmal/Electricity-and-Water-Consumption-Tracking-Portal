@@ -1,23 +1,20 @@
 <?php
-$showError=true;
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     if(isset($_POST['login'])){
         include "db.php";
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
         if(!empty($uname) && !empty($pass) && !is_numeric($uname)){
-            $query = "select * from form where uname ='$uname' limit 1";
+            $query = "select * from newUser_credentials where uname ='$uname' limit 1";
             $result = mysqli_query($con, $query);
             if($result && mysqli_num_rows($result) > 0){
                 while($user_data = mysqli_fetch_assoc($result)){
                     if(password_verify($pass, $user_data['pass'])){
                         session_start();
-                        header("location: index.html");
+                        header("location: dashboard.php");
                     }
-                    
+                    else{
                 echo "<script type='text/javascript'> alert('wrong username or password')</script>";
-                $showError = "Incorrect credentials!";
-                exit();
             }
                 }
             }
@@ -32,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style_1.css">
+    <link rel="stylesheet" href="./assets/css/signin.css">
     <title>Login</title>
 </head>
 
@@ -49,7 +46,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             </canvas>
                 
                 <div class="form-group">
-                    <input type="text" name="uname" required>
+                    <input type="text" name="uname" maxlength="35" required >
                     <!-- Icon for username input -->
                     <i class="fas fa-user"></i>
                     <!-- Label for username input -->
@@ -57,16 +54,16 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 </div>
                 <!-- Form group for password input -->
                 <div class="form-group">
-                    <input type="password" name="pass" required>
+                    <input type="password" name="pass" maxlength="10" required>
                     <!-- Icon for password input -->
                     <i class="fas fa-lock"></i>
                     <!-- Label for password input -->
                     <label for="">password</label>
                 </div>
                 <!-- Link for forgot password -->
-                <div class="forgot-pass">                   
+                <!-- <div class="forgot-pass">                   
                     <a href="#">forgot password?</a>
-                </div>
+                </div> -->
                 <!-- Button to submit login form -->
                 <button type="submit" class="btn" name="login">login</button>
                 <!-- Link to sign-up form -->

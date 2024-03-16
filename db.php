@@ -1,3 +1,3 @@
 <?php
-    $con = mysqli_connect("localhost","root","","register") or die(mysqli_error($con));
+    $con = mysqli_connect("localhost","root","","ecotrack") or die(mysqli_error($con));
 ?>
