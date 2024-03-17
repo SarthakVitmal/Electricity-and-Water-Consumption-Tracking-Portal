@@ -23,8 +23,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (!empty ($email) && !empty ($pass) && !is_numeric($email)) {
             $query = "insert into newUser_credentials (uname, email, pass) values ('$uname', '$email', '$hash')";
             mysqli_query($con, $query);
-            echo 'alert("Registered Successfully")';
-            header("location: signin.php");
+            echo "<script>
+            alert('Registered Successfully')
+            window.location.href='signin.php'
+            </script>";
         } else {
             echo "alert('Please enter some valid information!')";
         }
