@@ -11,7 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 while ($user_data = mysqli_fetch_assoc($result)) {
                     if (password_verify($pass, $user_data['pass'])) {
                         session_start();
-                        header("location: dashboard.php");
+                        echo "<script>
+                        alert('Login Successfully!')
+                        window.location.href='dashboard.php'
+                        </script>";
                     } else {
                         echo "<script type='text/javascript'> alert('wrong username or password')</script>";
                     }
