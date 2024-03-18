@@ -84,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <!-- Form group for password input -->
                 <div class="form-group">
-                    <input onclick="validatePassword" class="password" type="password" name="pass" maxlength="10"
+                    <input onclick="validatePassword" class="password" type="password" name="pass" maxlength="15"
                         required>
                     <!-- Icon for password input -->
                     <i class="fas fa-lock"></i>
