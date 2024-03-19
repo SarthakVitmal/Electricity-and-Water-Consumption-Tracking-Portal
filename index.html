@@ -63,9 +63,9 @@
         <ul class="navbar-links">
           <li class="logo">
             <img
-              src="./assets/image/website-logo.jpeg"
+              src="./assets/image/website-logo-transparent.png"
               class="logoimage"
-            />EcoTrack
+            /><p class="website-name">EcoTrack</p>
           </li>
           <li><a class="home" href="#">Home</a></li>
           <li><a class="aboutus" href="#about1">About Us</a></li>
@@ -90,7 +90,7 @@
     </header>
     <!-- Superimage section -->
     <main cla">
-      <section class="superimage ">
+      <section class="superimage">
         <p class="superimageheading">OPEN THE DOOR FOR BETTER LIVING</p>
         <p class="superimageheading2">
           Track and Save water and electricity<br />for Better Future.
@@ -106,7 +106,7 @@
       </section>
 
       <!-- Process Section -->
-      <section class="process">
+      <section class="process animated">
         <div class="step1-login">
           <div class="login-img"></div>
           <div class="caption">Step1 : Login</div>
@@ -129,7 +129,7 @@
       </section>
 
       <section class="water-saving-benefits">
-        <section class="content-section1">
+        <section class="content-section1 animated">
           <div class="content1">
             <p class="content-heading">Save Water</p>
             <p class="content-description">
@@ -138,7 +138,7 @@
             </p>
           </div>
         </section>
-        <section class="content-section2">
+        <section class="content-section2 animated">
           <div class="content1">
             <p class="content-heading">Save Electricity</p>
             <p class="content-description">
@@ -148,7 +148,7 @@
           </div>
         </section>
 
-        <section class="content-section3">
+        <section class="content-section3 animated">
           <div class="content1">
             <p class="content-heading">Sustainability Tips</p>
             <p class="content-description">
@@ -159,7 +159,7 @@
           </div>
         </section>
 
-        <section class="content-section4">
+        <section class="content-section4 animated">
           <div class="content1">
             <p class="content-heading">Environmental Impact</p>
             <p class="content-description">
@@ -175,7 +175,7 @@
       <hr />
       <!-- AboutUs section -->
       <section id="about1" class="about">
-        <div class="left-section-content">
+        <div class="left-section-content animated">
           <p class="about-heading">About Us</p>
           <span id="water-saving-benefits-content-description"
             >Welcome to EcoTrack, your reliable partner in tracking and managing
@@ -200,7 +200,7 @@
             solution that brings simplicity to sustainable living.</span
           >
         </div>
-        <div class="right-section-content">
+        <div class="right-section-content animated">
           <div class="first-row">
             <div class="water-tracking">
               <img src="./assets/image/free-water-tracking.webp" />
@@ -229,7 +229,7 @@
       <hr />
 
       <!-- Our Team Section -->
-      <section class="team">
+      <section class="team animated">
         <div class="team-heading">
           <p>Our Team</p>
         </div>
@@ -310,7 +310,7 @@
       <hr />
       <!-- Contact Us section -->
       <section id="contact1" class="contactus">
-        <div class="form-section">
+        <div class="form-section animated">
           <h2>Connect With Us</h2>
           <form action="https://formspree.io/f/mdoqdgzw" method="POST">
             <div class="name-section">
@@ -469,12 +469,6 @@
       </div>
     </footer>
     <script>
-      document
-        .getElementById("toggleBtn")
-        .addEventListener("click", function () {
-          document.querySelector(".navbar-links").classList.toggle("active");
-        });
-
       function playAudio() {
         let audio = document.getElementsByClassName("welcomeAudio")[0];
         audio
@@ -484,15 +478,36 @@
             console.error("Autoplay prevented:", error.message);
           });
       }
+      document.getElementById("toggleBtn").addEventListener("click", function () {
+    document.querySelector(".navbar-links").classList.toggle("active");
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const animatedElements = document.querySelectorAll('.animated');
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
 
-      document
-        .getElementById("toggleBtn")
-        .addEventListener("click", function () {
-          let navbarLinks = document.querySelector(".navbar-links");
-          navbarLinks.classList.toggle("active");
+    function handleScroll() {
+        animatedElements.forEach(function (element) {
+            if (isInViewport(element)) {
+                element.classList.add('fade-in-up');
+            }
         });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    handleScroll();
+});
+
     </script>
 
-    <!-- <script src="./assets/js/scriptLandingPage.js"></script> -->
+    <script src="./assets/js/scriptLandingPage.js"></script>
   </body>
 </html>
