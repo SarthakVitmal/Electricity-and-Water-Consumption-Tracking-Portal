@@ -45,10 +45,32 @@ $username = "Amanda King";
                 </div>
                 <figcaption>
                     <?php
-                    if(isset($username)){
-                        echo $username;
-                    }
-                    ?>
+            session_start();
+            
+            if(isset($_SESSION['uname'])) {
+                include 'db.php';
+                $uname = $_SESSION['uname'];
+            
+                $query = $con->prepare("SELECT uname FROM newuser_credentials WHERE uname = ?");
+                $query->bind_param("s", $uname);
+                $query->execute();
+                $result = $query->get_result();
+            
+                if($result->num_rows > 0) {
+                    $row = $result->fetch_assoc();
+                    $uname = $row['uname'];
+            
+                    echo $uname;
+                } else {
+                    echo "User not found.";
+                }
+            
+                $query->close();
+                $con->close();
+            } else {
+                echo "You are not logged in.";
+            }
+            ?>
                 </figcaption>
             </figure>
         
