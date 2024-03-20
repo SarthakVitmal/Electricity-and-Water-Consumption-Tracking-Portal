@@ -22,6 +22,9 @@ Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing
 
 2. Server Side Validation: Server-side validation is implemented to ensure that the data submitted by users is accurate, consistent, and safe. This validation process occurs on the server, providing an additional layer of security to prevent malicious or erroneous data from being processed.
 
+
+3. Secure Password Storage using Hashing: Passwords are securely stored using hashing techniques, which convert the password into a unique, irreversible string of characters. This ensures that even if the database is compromised, passwords cannot be easily decrypted or accessed by unauthorized parties.
+
 ## Getting Started
 
 instructions on how to get the project up and running on a local machine.
