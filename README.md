@@ -8,7 +8,7 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [How to visit our site](#how to visit our site)
+- [Link](#link)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
