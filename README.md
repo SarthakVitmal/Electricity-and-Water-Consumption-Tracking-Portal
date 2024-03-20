@@ -14,7 +14,8 @@
 
 ## Introduction
 
-introduction, Problem?, Solution?
+Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing water and electricity consumption. With EcoTrack, you can monitor your usage, track trends, and implement strategies to reduce your environmental footprint. Join us in our mission to promote sustainability and preserve precious resources for future generations.
+ Problem?, Solution?
 
 ## Features
 
