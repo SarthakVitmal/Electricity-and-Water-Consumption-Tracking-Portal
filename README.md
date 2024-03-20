@@ -25,6 +25,8 @@ Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing
 
 3. Secure Password Storage using Hashing: Passwords are securely stored using hashing techniques, which convert the password into a unique, irreversible string of characters. This ensures that even if the database is compromised, passwords cannot be easily decrypted or accessed by unauthorized parties.
 
+
+4. Tracking Users' Water and Electricity Usage: EcoTrack allows users to monitor and track their water and electricity consumption over time. By providing insightful data and visualizations, users can gain a better understanding of their usage patterns and identify areas for improvement.
 ## Getting Started
 
 instructions on how to get the project up and running on a local machine.
