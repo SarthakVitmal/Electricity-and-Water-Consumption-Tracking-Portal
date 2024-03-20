@@ -17,11 +17,9 @@
 Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing water and electricity consumption. With EcoTrack, you can monitor your usage, track trends, and implement strategies to reduce your environmental footprint. Join us in our mission to promote sustainability and preserve precious resources for future generations.
 
 
-## Features
+## Features 
+1.User Authentication: This feature ensures that only authorized users can access the EcoTrack platform. By requiring users to log in with their credentials, such as a username and password, we maintain the security and privacy of their data.
 
-- Feature 1
-- Feature 2
-- ...
 
 ## Getting Started
 
