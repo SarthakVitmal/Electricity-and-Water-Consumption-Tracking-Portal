@@ -27,6 +27,10 @@ Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing
 
 
 4. Tracking Users' Water and Electricity Usage: EcoTrack allows users to monitor and track their water and electricity consumption over time. By providing insightful data and visualizations, users can gain a better understanding of their usage patterns and identify areas for improvement.
+
+
+5. Providing Solutions to Users Based on Their Water and Electricity Consumption: Based on the data collected from users' consumption patterns, EcoTrack offers personalized recommendations and solutions to help users reduce their water and electricity usage. These solutions may include tips for conservation, suggestions for more energy-efficient appliances, or strategies for optimizing usage habits.
+
 ## Getting Started
 
 instructions on how to get the project up and running on a local machine.
