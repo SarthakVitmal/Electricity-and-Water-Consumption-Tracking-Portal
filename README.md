@@ -8,7 +8,7 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [How to visit our site](#how to visit our site)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
@@ -31,10 +31,9 @@ Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing
 
 5. Providing Solutions to Users Based on Their Water and Electricity Consumption: Based on the data collected from users' consumption patterns, EcoTrack offers personalized recommendations and solutions to help users reduce their water and electricity usage. These solutions may include tips for conservation, suggestions for more energy-efficient appliances, or strategies for optimizing usage habits.
 
-## Getting Started
-
-instructions on how to get the project up and running on a local machine.
-
+## How to visit our site
+Given below is the link to have a look at our site : 
+https://ecotrack.lovestoblog.com/
 ## Usage
 
 
