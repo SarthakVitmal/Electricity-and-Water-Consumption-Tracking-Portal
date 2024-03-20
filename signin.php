@@ -1,22 +1,24 @@
 <?php
+session_start();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset ($_POST['login'])) {
         include "db.php";
         $uname = $_POST['uname'];
         $pass = $_POST['pass'];
         if (!empty ($uname) && !empty ($pass) && !is_numeric($uname)) {
-            $query = "select * from newUser_credentials where uname ='$uname' limit 1";
+            $query = "select * from newuser_credentials where uname ='$uname' limit 1";
             $result = mysqli_query($con, $query);
             if ($result && mysqli_num_rows($result) > 0) {
                 while ($user_data = mysqli_fetch_assoc($result)) {
                     if (password_verify($pass, $user_data['pass'])) {
-                        session_start();
+                        $_SESSION['uname'] = $uname;
+                        echo $_SESSION['uname'];
                         echo "<script>
                         alert('Login Successfully!')
                         window.location.href='dashboard.php'
                         </script>";
                     } else {
-                        echo "<script type='text/javascript'> alert('wrong username or password')</script>";
+                        echo "<script> alert('wrong username or password')</script>";
                     }
                 }
             }
@@ -69,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <!-- Form group for password input -->
                 <div class="form-group">
-                    <input type="password" name="pass" maxlength="10" required>
+                    <input type="password" name="pass" maxlength="35" required>
                     <!-- Icon for password input -->
                     <i class="fas fa-lock"></i>
                     <!-- Label for password input -->
