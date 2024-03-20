@@ -36,6 +36,7 @@ Given below is the link to have a look at our site :
 https://ecotrack.lovestoblog.com/
 ## Usage
 Usage for water form:
+
 EcoTrack's water tracking form is designed to gather detailed information about users' water usage habits in order to provide tailored recommendations for conservation. Users are prompted to answer questions such as the number of people in their household, their diligence in fixing dripping faucets, the availability of 24-hour water supply, and the source of their bathing water. Additionally, users are asked about their bathing habits, including the frequency of showers or the number of buckets used per week. The form also inquires about the duration of dishwasher and washing machine cycles, as well as the average time spent washing utensils. Other questions address cleaning frequency, water-saving behaviors such as turning off taps while brushing, and the use of water-efficient appliances or rainwater harvesting systems. Based on users' responses, EcoTrack generates personalized tips and recommendations to help reduce water consumption and promote sustainable water usage practices.
 
 Usage for electricity form:
