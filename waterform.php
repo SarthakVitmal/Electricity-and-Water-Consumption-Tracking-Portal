@@ -28,72 +28,72 @@
         <img class="logo" style="height: 3rem;" src="assets/image/website-logo-transparent.png">
         <h1 style="text-decoration:underline;">Water Consumption Form</h1>
     </div>
-    <form action="waterform_connection.php" method="post">
+    <form action="waterform_connection.php" id="water_form" method="post">
         <div id="task-container">
             <div>
                 <label>1.No of Persons in your house?</label>
-                <input type="number" name="persons" placeholder="Eg.2"><br>
-
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" name="persons" required placeholder="Eg.2"><br>
+ 
                 <label>2.Do you fix dripping faucets promptly?</label>
                 <div class="options">
-                    <input type="radio" name="fix_faucets" value="yes">
+                    <input type="radio" name="fix_faucets" required value="yes">
                     <label>Yes</label>
-                    <input type="radio" name="fix_faucets" value="no">
+                    <input type="radio" name="fix_faucets" required value="no">
                     <label>No</label><br>
                 </div>
 
                 <label>3.Do you have 24hrs water supply at your home?</label>
                 <div class="options">
-                    <input type="radio" name="water_supply" value="yes">
+                    <input type="radio" name="water_supply" required value="yes">
                     <label>Yes</label>
-                    <input type="radio" name="water_supply" value="no">
+                    <input type="radio" name="water_supply" required value="no">
                     <label>No</label><br>
                 </div>
 
                 <label>4.What is the source of bath?</label>
                 <div class="options">
-                    <input type="radio" name="shower" value="Shower">
+                    <input type="radio" name="shower" required value="Shower">
                     <label>Shower</label>
-                    <input type="radio" name="shower" value="Bucket">
+                    <input type="radio" name="shower" required value="Bucket">
                     <label>Bucket</label><br>
                 </div>
 
                 <label>5.If Shower? How often do you shower? (per week)</label>
-                <input type="number" name="shower_frequency"><br>
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" required name="shower_frequency"><br>
 
                 <label>6.If Buckets? How much bucket you use? (per week)</label>
-                <input type="number" name="bucket_number"><br>
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" required name="bucket_number"><br>
 
                 <label>7.How long do you run your dishwasher or washing machine? (in minutes)</label>
-                <input type="number" name="machine_runtime" placeholder="20" required><br>
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" required name="machine_runtime" placeholder="20" required><br>
 
                 <label>8.What is the average time of washing utensils at your home? (in minutes)</label>
-                <input type="number" name="utensils" placeholder="40"><br>
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" required name="utensils" placeholder="40"><br>
 
                 <label>9.How often you clean your house in a week?</label>
-                <input type="number" name="house_cleaning" placeholder="40"><br>
+                <input type="number" onKeyPress="if(this.value.length==2) return false;" required name="house_cleaning" placeholder="40"><br>
 
                 <label>10.Do you turn off the tap while brushing?</label>
                 <div class="options">
-                    <input type="radio" name="tap_while_brushing" value="yes">
+                    <input type="radio" required name="tap_while_brushing" value="yes">
                     <label>Yes</label>
-                    <input type="radio" name="tap_while_brushing" value="no">
+                    <input type="radio" required name="tap_while_brushing" value="no">
                     <label>No</label><br>
                 </div>
 
                 <label>11.Do you use water-efficient appliances like a double flush system, etc.?</label>
                 <div class="options">
-                    <input type="radio" name="water_efficient_appliances" value="yes">
+                    <input type="radio" required name="water_efficient_appliances" value="yes">
                     <label>Yes</label>
-                    <input type="radio" name="water_efficient_appliances" value="no">
+                    <input type="radio" required name="water_efficient_appliances" value="no">
                     <label>No</label><br>
                 </div>
 
                 <label>12.Have you installed a rainwater harvesting system in your home?</label>
                 <div class="options">
-                    <input type="radio" name="rainwater_harvesting" value="yes">
+                    <input type="radio" required name="rainwater_harvesting" value="yes">
                     <label>Yes</label>
-                    <input type="radio" name="rainwater_harvesting" value="no">
+                    <input type="radio" required name="rainwater_harvesting" value="no">
                     <label>No</label><br>
                 </div>
             </div>
@@ -102,6 +102,23 @@
             </div>
         </div>
     </form>
+
+// //     <script>
+// //         document.getElementById("water_form").addEventListener("submit", function(event) {
+// //         event.preventDefault();
+        
+// //         const formData = new FormData(this);
+// //             const formObject = {};
+// //         formData.forEach(function(value, key){
+// //             formObject[key] = value;
+// //         });
+        
+// //         localStorage.setItem('water_data', JSON.stringify(formObject));
+// //             this.reset();
+        
+// //         console.log("Form data stored in localStorage:", formObject);
+// // });
+// </script>
 </body>
 
 </html>
