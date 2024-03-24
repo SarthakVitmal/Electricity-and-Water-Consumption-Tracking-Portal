@@ -1,34 +1,57 @@
 <?php
-// $showAlert = false;
 $showError = true;
-// to enable successfull connection to the database
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     include "db.php";
-    if (isset ($_POST['register'])) {
+    if (isset($_POST['register'])) {
         $uname = $_POST['uname'];
         $email = $_POST['email'];
         $pass = $_POST['pass'];
 
-        // check whether this username exists or not
-        $existSql = "SELECT * FROM `newUser_credentials` WHERE uname = '$uname'";
-        $result = mysqli_query($con, $existSql);
-        $numExistRows = mysqli_num_rows($result);
-        if ($numExistRows > 0) {
-            echo "<script type='text/javascript'> alert('Username Exists!'); window.location.href = 'signup.php';</script>";
-            $showError = "Username Already Exists";
-            exit();
-        }
-        $hash = password_hash($pass, PASSWORD_DEFAULT);
-        if (!empty ($email) && !empty ($pass) && !is_numeric($email)) {
-            $query = "insert into newUser_credentials (uname, email, pass) values ('$uname', '$email', '$hash')";
-            mysqli_query($con, $query);
-            echo "<script>
-            alert('Registered Successfully')
-            window.location.href='signin.php'
-            </script>";
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "<script>alert('Invalid email format');</script>";
         } else {
-            echo "alert('Please enter some valid information!')";
+            // Password regex pattern
+            $passwordPattern = '/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,}$/';
+            if (!preg_match($passwordPattern, $pass)) {
+                echo "<script>alert('Password must contain at least one uppercase letter, one lowercase letter, one digit, one special character, and be at least 8 characters long');</script>";
+            } else {
+                // Password validation passed, continue with other checks
+                // check whether this username exists or not
+                $existSql = "SELECT * FROM `newuser_credentials` WHERE uname = '$uname'";
+                $result = mysqli_query($con, $existSql);
+                $numExistRows = mysqli_num_rows($result);
+                $existSql2 = "SELECT * FROM `newuser_credentials` WHERE email = '$email'";
+                $result2 = mysqli_query($con, $existSql2);
+                $numExistRows2 = mysqli_num_rows($result2);
+                if ($numExistRows > 0) {
+                    echo "<script type='text/javascript'> alert('Username Exists!'); window.location.href = 'signup.php';</script>";
+                    $showError = "Username Already Exists";
+                    exit();
+                }
+                if ($numExistRows2 > 0) {
+                    echo "<script type='text/javascript'> alert('Email Exists!'); window.location.href = 'signup.php';</script>";
+                    $showError = "Email Already Exists";
+                    exit();
+                }
+                if (preg_match("/@gmail\.com$/", $email)) {
+                    echo "The email address contains '@gmail.com'.";
+                } else {
+                    echo "The email address does not contain '@gmail.com'.";
+                }
+
+                $hash = password_hash($pass, PASSWORD_DEFAULT);
+                if (!empty($email) && !empty($pass) && !is_numeric($email)) {
+                    $query = "insert into newuser_credentials (uname, email, pass) values ('$uname', '$email', '$hash')";
+                    mysqli_query($con, $query);
+                    echo "<script>
+                    alert('Registered Successfully')
+                    window.location.href='signin.php'
+                    </script>";
+                } else {
+                    echo "alert('Please enter some valid information!')";
+                }
+            }
         }
     }
 }
@@ -59,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!-- Container for the sign-up form -->
         <div class="form-container sign-up">
             <!-- Form for sign-up -->
-            <form action="#" method="POST">
+            <form id="register" action="#" method="POST">
                 <div style="align-items:center; justify-content: center; display: flex;">
                     <img class="logo" style="height: 6rem;" src="assets/image/website-logo-transparent.png">
                 </div>
@@ -68,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </canvas>
                 <!-- Form group for username input -->
                 <div class="form-group">
-                    <input type="text" name="uname" maxlength="10" required>
+                    <input type="text" name="uname" maxlength="40" required>
                     <!-- Icon for username input -->
                     <i class="fas fa-user"></i>
                     <!-- Label for username input -->
@@ -84,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <!-- Form group for password input -->
                 <div class="form-group">
-                    <input onclick="validatePassword" class="password" type="password" name="pass" maxlength="15"
+                    <input onclick="validatePassword" class="password" type="password" name="pass" maxlength="40"
                         required>
                     <!-- Icon for password input -->
                     <i class="fas fa-lock"></i>
@@ -103,44 +126,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
                     ctx.font = "bold 30px  Poppins";
                     ctx.textAlign = "center";
-                    ctx.fillText("Sign Up", canvas.width / 2, canvas.height / 0.75 / 2);
+                    ctx.fillText("Sign Up", canvas.width / 2, canvas.height / 0.75 / 2); 
 
-                    document.addEventListener("DOMContentLoaded", function () {
-                        var emailInput = document.querySelector("input[name='email']");
-                        var passwordInput = document.querySelector("input[name='pass']");
-                        var submitButton = document.querySelector("button[name='register']");
-                        var form = document.querySelector("form[name='signupForm']");
+                    document.getElementById('register').addEventListener('submit', function(event) {
+                        
+                    var email = document.getElementById('email').value;
 
-                        emailInput.addEventListener("input", function () {
-                            validateEmail(emailInput.value);
-                        });
-                        passwordInput.addEventListener("input", function () {
-                            validatePassword(passwordInput.value);
-                        });
+                    // Email regex pattern
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                        function validateEmail(email) {
-                            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-
-                            if (emailRegex.test(email)) {
-                                if (email.includes('@gmail.') || (email.includes(('yahoo.'))) && (email.endsWith('.com') || email.endsWith('.in'))) {
-                                    return true;
-                                }
-                            }
-                            return false;
-                        }
-
-                        function validatePassword(password) {
-                            var hasUppercase = /[A-Z]/.test(password);
-                            var hasLowercase = /[a-z]/.test(password);
-                            var hasSpecialChar = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(password);
-
-                            if (hasUppercase && hasLowercase && hasSpecialChar) {
-                                submitButton.disabled = false;
-                            } else {
-                                submitButton.disabled = true;
-                            }
-                        }
-                    });                  
+                    if (!email.match(emailPattern)) {
+                        alert('Invalid email format');
+                        event.preventDefault();
+                    }
+                });
                 </script>
             </form>
         </div>
