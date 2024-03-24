@@ -12,13 +12,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 while ($user_data = mysqli_fetch_assoc($result)) {
                     if (password_verify($pass, $user_data['pass'])) {
                         $_SESSION['uname'] = $uname;
-                        echo $_SESSION['uname'];
                         echo "<script>
                         alert('Login Successfully!')
                         window.location.href='dashboard.php'
                         </script>";
                     } else {
-                        echo "<script> alert('wrong username or password')</script>";
+                        echo "<script type='text/javascript'> alert('wrong username or password')</script>";
                     }
                 }
             }
@@ -71,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <!-- Form group for password input -->
                 <div class="form-group">
-                    <input type="password" name="pass" maxlength="35" required>
+                    <input type="password" name="pass" maxlength="10" required>
                     <!-- Icon for password input -->
                     <i class="fas fa-lock"></i>
                     <!-- Label for password input -->
