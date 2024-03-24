@@ -19,96 +19,116 @@
         <img class="logo" style="height: 3rem;" src="assets/image/website-logo-transparent.png">
         <h1 style="text-decoration:underline;">Electricity Consumption Form</h1>
     </div>
-        <form action="electricityform_connection.php" method="post">
+        <form action="electricityform_connection.php" id="ele_form" method="post">
         <div id="task-container">
             <div>
                 <label for="persons">1. Number of occupants in your house?</label>
-                <input type="number" name="persons" placeholder="Eg. 2" required><br>
+                <input type="number" name="persons" onKeyPress="if(this.value.length==2) return false;" placeholder="Eg. 2" required><br>
 
                 <label>2. Do you use energy-efficient appliances and light bulbs?</label>
                 <div class="options">
-                    <input type="radio" name="energy_efficient_appliances" value="yes">
+                    <input type="radio" name="energy_efficient_appliances" value="yes" required>
                     <label>Yes</label>
-                    <input type="radio" name="energy_efficient_appliances" value="no">
+                    <input type="radio" name="energy_efficient_appliances" value="no" required>
                     <label>No</label><br>
                 </div>
 
                 <label>3. Do you use air conditioning or heating systems at home?</label>
                 <div class="options">
-                    <input type="radio" name="heating_cooling" value="yes">
+                    <input type="radio" name="heating_cooling" value="yes" required>
                     <label>Yes</label>
-                    <input type="radio" name="heating_cooling" value="no">
+                    <input type="radio" name="heating_cooling" value="no" required>
                     <label>No</label><br>
                 </div>
 
                 <label>4. How often do you do laundry in a week?</label>
-                <input type="number" name="laundry_frequency" placeholder="Example : 2"><br>
+                <input type="number" name="laundry_frequency" onKeyPress="if(this.value.length==2) return false;" placeholder="Example : 2" required><br>
 
                 <label>5. Do you turn off lights and electronic devices when not in use?</label>
                 <div class="options">
-                    <input type="radio" name="turn_off_lights" value="yes">
+                    <input type="radio" name="turn_off_lights" value="yes" required>
                     <label>Yes</label>
-                    <input type="radio" name="turn_off_lights" value="no">
+                    <input type="radio" name="turn_off_lights" value="no" required>
                     <label>No</label><br>
                 </div>
 
                 <label>6. What type of lighting do you use predominantly?</label>
                 <div class="options">
-                    <input type="radio" name="lighting_type" value="LED">
+                    <input type="radio" name="lighting_type" value="LED" required>
                     <label>LED</label>
-                    <input type="radio" name="lighting_type" value="Incandescent">
+                    <input type="radio" name="lighting_type" value="Incandescent" required>
                     <label>Incandescent</label>
-                    <input type="radio" name="lighting_type" value="CFL">
+                    <input type="radio" name="lighting_type" value="CFL" required>
                     <label>CFL</label><br>
                 </div>
 
                 <label>7. Do you have solar panels installed at your home?</label>
                 <div class="options">
-                    <input type="radio" name="solar_panels" value="yes">
+                    <input type="radio" name="solar_panels" value="yes" required>
                     <label>Yes</label>
-                    <input type="radio" name="solar_panels" value="no">
+                    <input type="radio" name="solar_panels" value="no" required>
                     <label>No</label><br>
                 </div>
 
                 <label>8. Do you unplug chargers and electronics when not in use?</label>
                 <div class="options">
-                    <input type="radio" name="unplug_electronics" value="yes">
+                    <input type="radio" name="unplug_electronics" value="yes" required>
                     <label>Yes</label>
-                    <input type="radio" name="unplug_electronics" value="no">
+                    <input type="radio" name="unplug_electronics" value="no" required>
                     <label>No</label><br>
                 </div>
 
                 <label>9. Electricity Units consumed in last month in KW/HR(Mention on Electricity Bill)</label>
-                <input type="number" name="units_consumed" placeholder="Example : 100"><br>
+                <input type="number" name="units_consumped" onKeyPress="if(this.value.length==2) return false;" placeholder="Example : 100" required><br>
 
                 <label>10. Enter the devices name you use daily along with the duration.</label>
                 <div class="devices" id="devices-container">
-                    <span>1.] </span>
-                    <input placeholder="Enter the device name" name="device_name">
-                    <input placeholder="Enter the quantity" name="quantity">
-                    <input placeholder="Enter the duration in hrs" name="duration">
+                    <span>1] </span>
+                    <input type = "text" maxlength = "20" placeholder="Enter the device name" name="device_name" required>
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the quantity" name="quantity" required>
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the duration in hrs" name="duration" required>
                 </div>
 
                 <div class="devices" id="devices-container">
                     <span>2]</span>
-                    <input placeholder="Enter the device name" name="device_name2">
-                    <input placeholder="Enter the quantity" name="quantity2">
-                    <input placeholder="Enter the duration in hrs" name="duration2">
+                    <input type = "text" maxlength = "20" placeholder="Enter the device name" name="device_name2">
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the quantity" name="quantity2">
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the duration in hrs" name="duration2">
                 </div>
 
                 <div class="devices" id="devices-container">
                     <span>3]</span>
-                    <input placeholder="Enter the device name" name="device_name3">
-                    <input placeholder="Enter the quantity" name="quantity3">
-                    <input placeholder="Enter the duration in hrs" name="duration3">
+                    <input type = "text" maxlength = "20" placeholder="Enter the device name" name="device_name3">
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the quantity" name="quantity3">
+                    <input type = "number" onKeyPress="if(this.value.length==2) return false;" placeholder="Enter the duration in hrs" name="duration3">
                 </div>    
             </div>
         </div>
         <div class="submitbtn" style="justify-content: center;align-items: center;display: flex;">
-        <input class="submit" type="submit" name="Submit" value="Submit">
+        <input class="submit" type="submit" name="Submit">
         </div>
-
     </form>
 </body>
-<script src="script.js"></script>
+
+<script>
+    document.getElementById("ele_form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        console.log("Form submission prevented!");
+
+        const formData = new FormData(this);
+        const formObject = {};
+        formData.forEach(function(value, key){
+            formObject[key] = value;
+        });
+        
+        localStorage.setItem('formData', JSON.stringify(formObject));
+        // this.reset(); //Tclear fields
+        
+        console.log("localStorage:", formObject);
+        alert('Form data submitted successfully');
+        window.location.href='dashboard.php';
+});
+</script>
+
+<!-- <script src="script.js"></script> -->
 </html>
