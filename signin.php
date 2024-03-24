@@ -1,26 +1,33 @@
 <?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    if (isset ($_POST['login'])) {
+    if (isset($_POST['login'])) {
         include "db.php";
-        $uname = $_POST['uname'];
-        $pass = $_POST['pass'];
-        if (!empty ($uname) && !empty ($pass) && !is_numeric($uname)) {
-            $query = "select * from newuser_credentials where uname ='$uname' limit 1";
+        $uname = mysqli_real_escape_string($con, $_POST['uname']); // Sanitize input
+        $pass = mysqli_real_escape_string($con, $_POST['pass']); // Sanitize input
+
+        if (!empty($uname) && !empty($pass) && !is_numeric($uname)) {
+            $query = "SELECT * FROM newuser_credentials WHERE uname ='$uname' LIMIT 1";
             $result = mysqli_query($con, $query);
+
             if ($result && mysqli_num_rows($result) > 0) {
-                while ($user_data = mysqli_fetch_assoc($result)) {
-                    if (password_verify($pass, $user_data['pass'])) {
-                        $_SESSION['uname'] = $uname;
-                        echo "<script>
-                        alert('Login Successfully!')
+                $user_data = mysqli_fetch_assoc($result);
+
+                if (password_verify($pass, $user_data['pass'])) {
+                    $_SESSION['uname'] = $uname;
+                    echo "<script>
+                        alert('Login Successful!')
                         window.location.href='dashboard.php'
                         </script>";
-                    } else {
-                        echo "<script type='text/javascript'> alert('wrong username or password')</script>";
-                    }
+                    exit;
+                } else {
+                    echo "<script>alert('Incorrect username or password')</script>";
                 }
+            } else {
+                echo "<script>alert('User not found')</script>";
             }
+        } else {
+            echo "<script>alert('Invalid input data')</script>";
         }
     }
 }
