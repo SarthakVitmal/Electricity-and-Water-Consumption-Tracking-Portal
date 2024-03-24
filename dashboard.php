@@ -25,26 +25,24 @@
                 </label>
             </div>
             
-            <div class="user-actions">
+            <div class="user-actions" style="display:flex;cursor:">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.094 2.085l-1.013-.082a1.082 1.082 0 0 0-.161 0l-1.063.087C6.948 2.652 4 6.053 4 10v3.838l-.948 2.846A1 1 0 0 0 4 18h4.5c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5H20a1 1 0 0 0 .889-1.495L20 13.838V10c0-3.94-2.942-7.34-6.906-7.915zM12 19.5c-.841 0-1.5-.659-1.5-1.5h3c0 .841-.659 1.5-1.5 1.5zM5.388 16l.561-1.684A1.03 1.03 0 0 0 6 14v-4c0-2.959 2.211-5.509 5.08-5.923l.921-.074.868.068C15.794 4.497 18 7.046 18 10v4c0 .107.018.214.052.316l.56 1.684H5.388z"/></svg>
                 </button>
-                <button>
+                <form action="logout.php" method="post">
+                <button type="submit" name="logout">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 21c4.411 0 8-3.589 8-8 0-3.35-2.072-6.221-5-7.411v2.223A6 6 0 0 1 18 13c0 3.309-2.691 6-6 6s-6-2.691-6-6a5.999 5.999 0 0 1 3-5.188V5.589C6.072 6.779 4 9.65 4 13c0 4.411 3.589 8 8 8z"/><path d="M11 2h2v10h-2z"/></svg>
                 </button>
+                <form>
             </div>
         </aside>
-        <?php
-// Assuming $username is set dynamically somewhere in your PHP code
-$username = "Amanda King";
-?>
         <header class="menu-wrap">
             <figure class="user">
                 <div class="user-avatar">
                     <img src="./assets/image/userprofile.png" alt="user profile">
                 </div>
                 <figcaption>
-                    <?php
+                <?php
             session_start();
             
             if(isset($_SESSION['uname'])) {
@@ -82,14 +80,14 @@ $username = "Amanda King";
                         <li>
                             <a href="waterform.php">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.855 14.365l-1.817 6.36a1.001 1.001 0 0 0 1.517 1.106L12 18.202l5.445 3.63a1 1 0 0 0 1.517-1.106l-1.817-6.36 4.48-3.584a1.001 1.001 0 0 0-.461-1.767l-5.497-.916-2.772-5.545c-.34-.678-1.449-.678-1.789 0L8.333 8.098l-5.497.916a1 1 0 0 0-.461 1.767l4.48 3.584zm2.309-4.379c.315-.053.587-.253.73-.539L12 5.236l2.105 4.211c.144.286.415.486.73.539l3.79.632-3.251 2.601a1.003 1.003 0 0 0-.337 1.056l1.253 4.385-3.736-2.491a1 1 0 0 0-1.109-.001l-3.736 2.491 1.253-4.385a1.002 1.002 0 0 0-.337-1.056l-3.251-2.601 3.79-.631z"/></svg>
-                                Track Water Usage
+                                Water Consumption
                             </a>
                         </li>
                         
                         <li>
                             <a href="electricityForm.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.855 14.365l-1.817 6.36a1.001 1.001 0 0 0 1.517 1.106L12 18.202l5.445 3.63a1 1 0 0 0 1.517-1.106l-1.817-6.36 4.48-3.584a1.001 1.001 0 0 0-.461-1.767l-5.497-.916-2.772-5.545c-.34-.678-1.449-.678-1.789 0L8.333 8.098l-5.497.916a1 1 0 0 0-.461 1.767l4.48 3.584zm2.309-4.379c.315-.053.587-.253.73-.539L12 5.236l2.105 4.211c.144.286.415.486.73.539l3.79.632-3.251 2.601a1.003 1.003 0 0 0-.337 1.056l1.253 4.385-3.736-2.491a1 1 0 0 0-1.109-.001l-3.736 2.491 1.253-4.385a1.002 1.002 0 0 0-.337-1.056l-3.251-2.601 3.79-.631z"/></svg>
-                                Track Electricity Usage
+                                Electricity Consumption
                             </a>
                         </li>
                     </ul>
@@ -102,7 +100,7 @@ $username = "Amanda King";
                         <li>
                             <a href="drip_calc.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6.855 14.365l-1.817 6.36a1.001 1.001 0 0 0 1.517 1.106L12 18.202l5.445 3.63a1 1 0 0 0 1.517-1.106l-1.817-6.36 4.48-3.584a1.001 1.001 0 0 0-.461-1.767l-5.497-.916-2.772-5.545c-.34-.678-1.449-.678-1.789 0L8.333 8.098l-5.497.916a1 1 0 0 0-.461 1.767l4.48 3.584zm2.309-4.379c.315-.053.587-.253.73-.539L12 5.236l2.105 4.211c.144.286.415.486.73.539l3.79.632-3.251 2.601a1.003 1.003 0 0 0-.337 1.056l1.253 4.385-3.736-2.491a1 1 0 0 0-1.109-.001l-3.736 2.491 1.253-4.385a1.002 1.002 0 0 0-.337-1.056l-3.251-2.601 3.79-.631z"/></svg>
-                                Calculate Your Water Consumption
+                                Faucet Flow Calculator
                             </a>
                         </li>
 
@@ -130,9 +128,9 @@ $username = "Amanda King";
                 <h1>Welcome Back!!</h1>
                     
                 <div class="action">
-                    <button>
-                        Save search
-                    </button>
+                <a href="tips.php" style="padding:10px;width:200px">
+                        Tips
+                </a>
                 </div>
             </header>
             
@@ -144,8 +142,39 @@ $username = "Amanda King";
                         </div>
                         
                         <div class="box-content">
-                            <span class="big">132</span>
-                            Units dropped
+                            <span class="big"></span>
+                            <?php
+                        session_start();
+
+                        if(isset($_SESSION['units_consumped'])) {
+                            $units_consumped = $_SESSION['units_consumped'];
+                        } else {
+                            if (isset($_SESSION['email'])) {
+                                include 'db.php';
+                                $email = $_SESSION['email'];
+
+                                $query = $con->prepare("SELECT units_consumped FROM user_electricityform_credentials WHERE email = ?");
+                                $query->bind_param("s", $email);
+                                $query->execute();
+                                $result = $query->get_result();
+
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();
+                                    $units_consumped = $row['units_consumped'];
+                                    $_SESSION['units_consumped'] = $units_consumped;
+                                } else {
+                                    $units_consumped = "Data not found.";
+                                }
+
+                                $query->close();
+                                $con->close();
+                            } else {
+                                $units_consumped = "You are not logged in.";
+                            }
+                        }
+                        ?>
+
+                           <span class="big"> 200 </span>Units Consumed
                         </div>
                     </div>
                     
