@@ -1,6 +1,3 @@
-![WhatsApp Image 2024-03-24 at 18 46 56 (2)](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/2e3b9c7f-84ee-43a5-8d61-50469c85225f)
-![WhatsApp Image 2024-03-24 at 18 46 56 (2)](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/97789244-8b38-4db1-a631-835214bd6904)
-![WhatsApp Image 2024-03-24 at 18 46 56 (2)](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/f5f94a4c-5f49-48db-baf2-611174357873)
  Pleade Update Readme file... TEMPLATE
 
 # EcoTrack
