@@ -251,8 +251,23 @@ body {
     transition: background-color 0.15s ease;
 }
 
+.content-wrap .content-head .action a {
+    border: 0;
+    background: var(--blue);
+    color: var(--white);
+    width: auto;
+    height: 3.5em;
+    padding: 0 2.25em;
+    border-radius: 3.5em;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.15s ease;
+}
+
 .content-wrap .content-head .action button:hover {
     background-color: darken(var(--blue), 10%);
+    border: 1px solid #4b84fe;
 }
 
 .content-wrap .info-boxes {
@@ -286,7 +301,7 @@ body {
 
 .content-wrap .info-boxes .info-box .box-content {
     padding-left: 1.25em;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .content-wrap .info-boxes .info-box .box-content .big {
@@ -405,4 +420,50 @@ body {
 .content-wrap .person-boxes .person-box .box-actions button:hover svg path,
 .content-wrap .person-boxes .person-box .box-actions button:hover svg circle {
     fill: lighten(var(--colorDark), 10%);
+}
+
+.menu_toggle_btn{
+    display: none;
+}
+
+
+/*&Responsive */
+  @media (max-width:800px){
+
+.dashboard .menu_toggle_btn{
+    position: fixed;
+    top: 25px;
+    left: 15px;
+    z-index: 100;
+    background: white;
+    border: 1px solid;
+    border-radius: 5px 10px 10px;
+    box-shadow: 1px 1px 6px grey;
+    padding: 3px 5px;
+}
+.dashboard .search-wrap{
+     padding: 15px 3em;
+    position: fixed;   
+    width: 100%;
+}
+
+.dashboard .menu-wrap{
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    z-index: 99;
+    height: 100%;
+    transition: all .4s ease;
+}
+
+.dashboard .content-wrap{
+    position: absolute;
+    margin-top: 55px;
+    width: 100%;
+}
+
+.dashboard.toggle_active .menu-wrap{
+    left: 0%;
+
+  }
 }
