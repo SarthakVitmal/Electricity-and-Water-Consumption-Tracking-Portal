@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </canvas>
                 <!-- Form group for username input -->
                 <div class="form-group">
-                    <input type="text" name="uname" maxlength="40" required>
+                    <input id="uname" type="text" name="uname" maxlength="40" required>
                     <!-- Icon for username input -->
                     <i class="fas fa-user"></i>
                     <!-- Label for username input -->
@@ -135,12 +135,28 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     document.getElementById('register').addEventListener('submit', function(event) {
                         
                     var email = document.getElementById('email').value;
+                    var uname = document.getElementById('uname').value;
 
                     var emailPattern = /^[a-zA-Z0-9]+@gmail\.com$/;
+                    var emailPattern2 = /^[0-9]+@gmail\.com$/;
+                    var unamePattern = /^[a-zA-Z0-9]/;
                     if (!email.match(emailPattern)) {
                         alert('Invalid Email(Google Account Required)');
                         event.preventDefault();
                     }
+                    if(email.match(emailPattern2)){
+                        alert("Invalid Email Format");
+                        event.preventDefault();
+                    }
+                    if (uname.indexOf(' ') !== -1) {
+                        alert('Username should not contain any spaces');
+                        event.preventDefault(); 
+                    }
+                    if(!uname.match(unamePattern)){
+                        alert("Username should not contain any special characters");
+                        event.preventDefault();
+                    }
+
                 });
                 </script>
             </form>
