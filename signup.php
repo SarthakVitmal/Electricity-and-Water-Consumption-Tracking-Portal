@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     window.location.href='signin.php'
                     </script>";
                 } else {
-                    echo "alert('Please enter some valid information!')";
+                    echo "alert('Please enter valid information..Try Again!')";
                 }
             }
         }
@@ -72,7 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/signin.css">
-    <title>SignUp</title>
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/R.c83b249c64943e53c12013e7a35da769?rik=xt%2bIZgvKL8%2fKLg&riu=http%3a%2f%2flofrev.net%2fwp-content%2fphotos%2f2014%2f10%2fGreen-logo.jpg&ehk=Q3AidRmxPk5TJDC%2fxeJCTBHjd2pUKm8fnsjvTKEWCjU%3d&risl=&pid=ImgRaw&r=0"
+    />
+    <title>EcoTrack : New User Registeration</title>
 </head>
 
 
@@ -99,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
                 <!-- Form group for email input -->
                 <div class="form-group">
-                    <input onclick="validateEmail" type="email" name="email" maxlength="35" required>
+                    <input onclick="validateEmail" type="email" id="email" name="email" maxlength="35" required>
                     <!-- Icon for email input -->
                     <i class="fas fa-at"></i>
                     <!-- Label for email input -->
@@ -132,11 +136,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         
                     var email = document.getElementById('email').value;
 
-                    // Email regex pattern
-                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+                    var emailPattern = /^[a-zA-Z0-9]+@gmail\.com$/;
                     if (!email.match(emailPattern)) {
-                        alert('Invalid email format');
+                        alert('Invalid Email(Google Account Required)');
                         event.preventDefault();
                     }
                 });
