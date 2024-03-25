@@ -103,21 +103,23 @@
         </div>
     </form>
 
-// //     <script>
-// //         document.getElementById("water_form").addEventListener("submit", function(event) {
-// //         event.preventDefault();
+<script>
+        document.getElementById("water_form").addEventListener("submit", function(event) {
+        event.preventDefault();
         
-// //         const formData = new FormData(this);
-// //             const formObject = {};
-// //         formData.forEach(function(value, key){
-// //             formObject[key] = value;
-// //         });
+        const formData = new FormData(this);
+            const formObject = {};
+        formData.forEach(function(value, key){
+            formObject[key] = value;
+        });
         
-// //         localStorage.setItem('water_data', JSON.stringify(formObject));
-// //             this.reset();
+        localStorage.setItem('water_data', JSON.stringify(formObject));
+            this.reset();
         
-// //         console.log("Form data stored in localStorage:", formObject);
-// // });
+        console.log("Form data stored in localStorage:", formObject);
+        alert('Form data submitted successfully');
+        window.location.href = 'waterTips.php'
+});
 // </script>
 </body>
 
