@@ -44,6 +44,8 @@ Usage for electricity form:
 EcoTrack's electricity tracking form is designed to gather comprehensive data on users' electricity consumption habits, enabling personalized recommendations for energy conservation. Users are prompted to provide information such as the number of occupants in their household, their use of energy-efficient appliances and light bulbs, and whether they utilize air conditioning or heating systems. Additionally, users are asked about their laundry frequency, habits regarding turning off lights and electronic devices when not in use, and the predominant type of lighting used. The form also inquires about the presence of solar panels at home and whether users unplug chargers and electronics when idle. Furthermore, users are requested to input their electricity consumption data from the previous month as indicated on their electricity bill. Lastly, users can list the daily usage duration of specific electronic devices. Based on these inputs, EcoTrack generates personalized tips and strategies to help users reduce their electricity consumption and adopt more sustainable energy practices.
 
 ## Contributing
+![EcoTrack Landing Page](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/ea8ca3a0-a799-4980-9f2e-b2ec1fcb0aad)
+
 ![Login Page](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/1e41b7b8-cd59-4319-92c6-a97aafca929c)
 
 
