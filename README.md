@@ -60,5 +60,8 @@ EcoTrack's electricity tracking form is designed to gather comprehensive data on
 
 ![calculator](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/617bcef4-2460-485b-bb96-384c9de0858f)
 
+<img width="960" alt="eleform" src="https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/5d8e0208-b450-44e1-b1c8-b405d1e5a425">
+
 ![WhatsApp Image 2024-03-24 at 18 47 02_c1d15eda](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/cb31b20c-a442-4f4c-95fa-303660618830)
+
 
