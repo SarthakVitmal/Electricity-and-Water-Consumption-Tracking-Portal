@@ -17,17 +17,20 @@
 </head>
 <body>
     <div class="dashboard">
+        <button class="menu_toggle_btn" onClick="toggleMenu()" >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#363853" stroke-width="1.5"/><path d="M3.297 16.234a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#0095FF" stroke-width="1.5"/><path d="M14.297 5.234a2.6 2.6 0 0 1 1.937-1.937 5.54 5.54 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Zm0 11a2.6 2.6 0 0 1 1.937-1.937 5.55 5.55 0 0 1 2.532 0 2.6 2.6 0 0 1 1.937 1.937c.195.833.195 1.7 0 2.532a2.6 2.6 0 0 1-1.937 1.937c-.833.195-1.7.195-2.532 0a2.6 2.6 0 0 1-1.937-1.937 5.55 5.55 0 0 1 0-2.532Z" stroke="#363853" stroke-width="1.5"/></svg>
+        </button>
         <aside class="search-wrap">
             <div class="search">
                 <label for="search">
-                    
-                    <input type="text" id="search">
+                <i class="fa-solid fa-location-dot"></i>
+                    <p id="location" style="color:black;margin-left:5px"></p>
                 </label>
             </div>
             
-            <div class="user-actions" style="display:flex;cursor:">
+            <div class="user-actions" style="display:flex;">
                 <form action="logout.php" method="post">
-                <button type="submit" name="logout">
+                <button type="submit" name="logout" style="cursor:pointer;">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 21c4.411 0 8-3.589 8-8 0-3.35-2.072-6.221-5-7.411v2.223A6 6 0 0 1 18 13c0 3.309-2.691 6-6 6s-6-2.691-6-6a5.999 5.999 0 0 1 3-5.188V5.589C6.072 6.779 4 9.65 4 13c0 4.411 3.589 8 8 8z"/><path d="M11 2h2v10h-2z"/></svg>
                 </button>
                 <form>
@@ -139,39 +142,14 @@
                         </div>
                         
                         <div class="box-content">
-                            <span class="big"></span>
-                            <?php
-                        session_start();
-
-                        if(isset($_SESSION['units_consumped'])) {
-                            $units_consumped = $_SESSION['units_consumped'];
-                        } else {
-                            if (isset($_SESSION['email'])) {
-                                include 'db.php';
-                                $email = $_SESSION['email'];
-
-                                $query = $con->prepare("SELECT units_consumped FROM user_electricityform_credentials WHERE email = ?");
-                                $query->bind_param("s", $email);
-                                $query->execute();
-                                $result = $query->get_result();
-
-                                if ($result->num_rows > 0) {
-                                    $row = $result->fetch_assoc();
-                                    $units_consumped = $row['units_consumped'];
-                                    $_SESSION['units_consumped'] = $units_consumped;
-                                } else {
-                                    $units_consumped = "Data not found.";
-                                }
-
-                                $query->close();
-                                $con->close();
-                            } else {
-                                $units_consumped = "You are not logged in.";
-                            }
-                        }
-                        ?>
-
-                           <span class="big"> 200 </span>Units Consumed
+                           <span class="big">
+                           <script>
+                               let data = localStorage.getItem('formData');
+                                data = JSON.parse(data);
+                                document.write(data.units_consumped)
+                           </script>
+                           </span>Units Consumed(In Last Month)
+                           
                         </div>
                     </div>
                     
@@ -179,14 +157,28 @@
                         <div class="box-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3,21c0,0.553,0.448,1,1,1h16c0.553,0,1-0.447,1-1v-1c0-3.714-2.261-6.907-5.478-8.281C16.729,10.709,17.5,9.193,17.5,7.5 C17.5,4.468,15.032,2,12,2C8.967,2,6.5,4.468,6.5,7.5c0,1.693,0.771,3.209,1.978,4.219C5.261,13.093,3,16.287,3,20V21z M8.5,7.5 C8.5,5.57,10.07,4,12,4s3.5,1.57,3.5,3.5S13.93,11,12,11S8.5,9.43,8.5,7.5z M12,13c3.859,0,7,3.141,7,7H5C5,16.141,8.14,13,12,13z"/></svg>
                         </div>
-                        
                         <div class="box-content">
-                            <span class="big">18</span>
-                            Water Saved (litres)
+                            <span class="big">
+                            <script>
+                            let data2 = localStorage.getItem('water_data');
+                            data2 = JSON.parse(data2);
+                            document.write(data2.shower_frequency * 15 + data2.machine_runtime * 8 + data2.utensils * 2);
+                            </script>
+                            </span>
+                            Water Consumed (litres)
                         </div>
                     </div>
                 </section>
         </main>
     </div>
+  <script>
+// responcive
+
+const toggleMenu =() =>{
+    console.log('menu toggle triggered')
+    document.querySelector('.dashboard').classList.toggle('toggle_active');
+}
+
+    </script>
 </body>
 </html>
