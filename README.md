@@ -46,9 +46,19 @@ EcoTrack's electricity tracking form is designed to gather comprehensive data on
 ## Contributing
 ![EcoTrack Landing Page](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/ea8ca3a0-a799-4980-9f2e-b2ec1fcb0aad)
 
-![Login Page](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/1e41b7b8-cd59-4319-92c6-a97aafca929c)
+![aboutus](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/90fbce85-85c9-4e7c-82e4-88efdb3690b3)
 
 ![footer](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/38c2b443-3fb6-4b6e-a0ef-cd0cfe517ed9)
 
+![signup](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/8ef1fc56-65cc-4751-88d8-9467505e5552)
 
+![Login Page](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/141913714/1e41b7b8-cd59-4319-92c6-a97aafca929c)
+
+![dashboard](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/cad6b24e-4f82-43b4-b55b-a171e1db9dd3)
+
+![waterform](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/8556d541-2f23-4103-90db-21ef09ee8418)
+
+![calculator](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/617bcef4-2460-485b-bb96-384c9de0858f)
+
+![WhatsApp Image 2024-03-24 at 18 47 02_c1d15eda](https://github.com/SarthakVitmal/pce_comp_web_programming_lab_Sarthak_Vitmal/assets/142256583/cb31b20c-a442-4f4c-95fa-303660618830)
 
