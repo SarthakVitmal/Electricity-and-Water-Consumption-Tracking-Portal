@@ -179,6 +179,44 @@ const toggleMenu =() =>{
     document.querySelector('.dashboard').classList.toggle('toggle_active');
 }
 
+        function getUserLocation() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const userIP = data.ip;
+                    fetch(`http://ip-api.com/json/${userIP}`)
+                        .then(response => response.json())
+                        .then(locationData => {
+                            const { city, country, lat, lon } = locationData;
+                            const locationElement = document.getElementById("location");
+                            locationElement.textContent = `${city}, ${country} | Lat: ${lat}, Long: ${lon}`;
+
+                            // Store location data in local storage
+                            localStorage.setItem("city", city);
+                            localStorage.setItem("country", country);
+                            localStorage.setItem("latitude", lat);
+                            localStorage.setItem("longitude", lon);
+                        })
+                        .catch(error => console.error('Error fetching location data:', error));
+                })
+                .catch(error => console.error('Error fetching IP address:', error));
+        }
+
+        window.onload = function() {
+            const city = localStorage.getItem("city");
+            const country = localStorage.getItem("country");
+            const latitude = localStorage.getItem("latitude");
+            const longitude = localStorage.getItem("longitude");
+
+            // Check if location data exists in localstorage
+            if (!city || !country || !latitude || !longitude) {
+                getUserLocation();
+            } else {
+                // Display location data from localstorage
+                const locationElement = document.getElementById("location");
+                locationElement.textContent = `${city}, ${country} | Lat: ${latitude}, Long: ${longitude}`;
+            }
+        };
     </script>
 </body>
 </html>
