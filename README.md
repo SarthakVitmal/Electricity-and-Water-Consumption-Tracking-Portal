@@ -33,7 +33,7 @@ Welcome to EcoTrack, your go-to platform for efficiently managing and minimizing
 
 ## Link
 Given below is the link to have a look at our site : 
-https://ecotrack.lovestoblog.com/
+http://ecotrack.lovestoblog.com/
 ## Usage
 Usage for water form:
 
